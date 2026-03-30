@@ -23,7 +23,7 @@
           };
 
           input.tablet = {
-            off = <function>;
+            off = null;
           };
 
           outputs = {
@@ -56,7 +56,7 @@
           layout = {
             gaps = 10;
             border = {
-              off = <function>;
+              off = null;
             };
             focus-ring = {
               width = 2;
