@@ -23,7 +23,7 @@
           };
 
           input.tablet = {
-            off = null;
+            off = _: { };
           };
 
           outputs = {
@@ -56,7 +56,7 @@
           layout = {
             gaps = 10;
             border = {
-              off = null;
+              off = _: { };
             };
             focus-ring = {
               width = 2;
