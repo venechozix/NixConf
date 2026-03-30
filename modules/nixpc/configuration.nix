@@ -6,6 +6,7 @@
     {
       imports = [
         self.nixosModules.nixpcHardware
+        self.nixosModules.niri
       ];
 
       boot.kernelPackages = pkgs.pkgs.linuxPackages_6_12;
@@ -44,20 +45,6 @@
         LC_TIME = "es_UY.UTF-8";
       };
 
-      users.defaultUserShell = pkgs.zsh;
-
-      services.syncthing = {
-        enable = true;
-        group = "syncthing";
-        user = "chozix";
-        dataDir = "/home/chozix/"; # Default folder for new synced folders
-        configDir = "/home/chozix/.config/syncthing"; # Folder for Syncthing's settings and keys
-      };
-
-      services.udisks2.enable = true;
-
-      services.avahi.enable = true;
-
       programs.zsh = {
         enable = true;
         enableCompletion = true;
@@ -76,6 +63,20 @@
           theme = "nicoulaj";
         };
       };
+
+      users.defaultUserShell = pkgs.zsh;
+
+      services.syncthing = {
+        enable = true;
+        group = "syncthing";
+        user = "chozix";
+        dataDir = "/home/chozix/"; # Default folder for new synced folders
+        configDir = "/home/chozix/.config/syncthing"; # Folder for Syncthing's settings and keys
+      };
+
+      services.udisks2.enable = true;
+
+      services.avahi.enable = true;
 
       users.users.chozix = {
         isNormalUser = true;
