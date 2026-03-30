@@ -212,11 +212,6 @@
             "Ctrl+Print".screenshot-screen = { };
             "Alt+Print".screenshot-window = { };
 
-            # Session management
-            "Mod+Escape" = {
-              allow-inhibiting = false;
-              toggle-keyboard-shortcuts-inhibit = { };
-            };
             "Mod+Shift+E".quit = { };
             "Ctrl+Alt+Delete".quit = { };
             "Mod+Shift+P".power-off-monitors = { };
