@@ -82,8 +82,7 @@
 
             # Applications
             "Mod+Return" = {
-              hotkey-overlay-title = "Open a Terminal: alacritty";
-              spawn = lib.getExe pkgs.alacritty;
+              hotkey-overlay-title = "Open a Terminal: alacritty" { spawn = lib.getExe pkgs.alacritty; };
             };
             "Mod+Space" = {
               hotkey-overlay-title = "Run an Application: fuzzel";
