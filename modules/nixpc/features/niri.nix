@@ -13,7 +13,7 @@
         inherit pkgs; # THIS PART IS VERY IMPORTAINT, I FORGOT IT IN THE VIDEO!!!
         settings = {
 
-          prefer-no-csd = null;
+          prefer-no-csd = _: { };
 
           xwayland-satellite.path = lib.getExe pkgs.xwayland-satellite;
 
@@ -91,20 +91,15 @@
             };
 
             # Overview / window management
-            "Mod+O" = {
-              repeat = false;
-              toggle-overview = { };
-            };
-            "Mod+X" = {
-              repeat = false;
-              close-window = { };
-            };
+            "Mod+O".toggle-overview = { };
+            "Mod+X".close-window = { };
 
             # Focus movement
             "Mod+Left".focus-column-left = { };
             "Mod+Down".focus-window-down = { };
             "Mod+Up".focus-window-up = { };
             "Mod+Right".focus-column-right = { };
+
             "Mod+H".focus-column-left = { };
             "Mod+J".focus-window-down = { };
             "Mod+K".focus-window-up = { };
@@ -115,6 +110,7 @@
             "Mod+Ctrl+Down".move-window-down = { };
             "Mod+Ctrl+Up".move-window-up = { };
             "Mod+Ctrl+Right".move-column-right = { };
+
             "Mod+Ctrl+H".move-column-left = { };
             "Mod+Ctrl+J".move-window-down = { };
             "Mod+Ctrl+K".move-window-up = { };
@@ -131,6 +127,7 @@
             "Mod+Shift+Down".focus-monitor-down = { };
             "Mod+Shift+Up".focus-monitor-up = { };
             "Mod+Shift+Right".focus-monitor-right = { };
+
             "Mod+Shift+H".focus-monitor-left = { };
             "Mod+Shift+J".focus-monitor-down = { };
             "Mod+Shift+K".focus-monitor-up = { };
@@ -145,28 +142,19 @@
             # Workspace navigation
             "Mod+I".focus-workspace-down = { };
             "Mod+U".focus-workspace-up = { };
+
             "Mod+Ctrl+I".move-column-to-workspace-down = { };
             "Mod+Ctrl+U".move-column-to-workspace-up = { };
+
             "Mod+Shift+I".move-workspace-down = { };
             "Mod+Shift+U".move-workspace-up = { };
 
             # Scroll workspace/column navigation
-            "Mod+WheelScrollDown" = {
-              cooldown-ms = 150;
-              focus-workspace-down = { };
-            };
-            "Mod+WheelScrollUp" = {
-              cooldown-ms = 150;
-              focus-workspace-up = { };
-            };
-            "Mod+Ctrl+WheelScrollDown" = {
-              cooldown-ms = 150;
-              move-column-to-workspace-down = { };
-            };
-            "Mod+Ctrl+WheelScrollUp" = {
-              cooldown-ms = 150;
-              move-column-to-workspace-up = { };
-            };
+            "Mod+WheelScrollDown".focus-workspace-down = { };
+            "Mod+WheelScrollUp".focus-workspace-up = { };
+            "Mod+Ctrl+WheelScrollDown".move-column-to-workspace-down = { };
+            "Mod+Ctrl+WheelScrollUp".move-column-to-workspace-up = { };
+
             "Mod+Shift+WheelScrollDown".focus-column-right = { };
             "Mod+Shift+WheelScrollUp".focus-column-left = { };
             "Mod+Ctrl+Shift+WheelScrollDown".move-column-right = { };
