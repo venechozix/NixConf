@@ -90,7 +90,7 @@
             "Mod+Shift+Slash".show-hotkey-overlay = { };
 
             # Applications
-            "Mod+T" = {
+            "Mod+Return" = {
               spawn = lib.getExe pkgs.alacritty;
             };
             "Mod+Space" = {
