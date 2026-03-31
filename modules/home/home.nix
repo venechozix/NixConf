@@ -152,11 +152,11 @@
     };
   };
 
-  dconf.settings = {
-    "org/gnome/desktop/interface" = {
-      color-scheme = "prefer-dark";
-    };
-  };
+  # dconf.settings = {
+  #   "org/gnome/desktop/interface" = {
+  #     color-scheme = "prefer-dark";
+  #   };
+  # };
 
   home.packages = with pkgs; [
     inputs.zen-browser.packages."${stdenv.hostPlatform.system}".twilight
