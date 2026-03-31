@@ -2,6 +2,7 @@
 {
 
   flake.nixosConfigurations.nixpc = inputs.nixpkgs.lib.nixosSystem {
+    specialArgs = { inherit inputs; };
     modules = [
       self.nixosModules.nixpcConfig
       inputs.home-manager.nixosModules.home-manager
