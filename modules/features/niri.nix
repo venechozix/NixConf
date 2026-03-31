@@ -22,7 +22,7 @@
         inherit pkgs; # THIS PART IS VERY IMPORTAINT, I FORGOT IT IN THE VIDEO!!!
         settings = {
 
-          spaw-at-startup = [
+          spawn-at-startup = [
             (lib.getExe self'.packages.myNoctalia)
           ];
 
