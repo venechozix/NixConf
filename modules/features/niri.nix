@@ -83,11 +83,6 @@
               { proportion = 0.66666; }
             ];
 
-            preset-column-heights = [
-              { proportion = 0.5; }
-              { proportion = 1; }
-            ];
-
             default-column-width = {
               proportion = 0.5;
             };
@@ -217,8 +212,9 @@
 
             "Mod+Escape" = {
               toggle-keyboard-shortcuts-inhibit = { };
-              _attrs = {
-                allow-inhibiting = false;
+              _ = {
+                props = {
+                  allow-inhibiting = false;
               };
             };
 
