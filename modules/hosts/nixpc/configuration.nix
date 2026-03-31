@@ -7,11 +7,11 @@
       imports = [
         self.nixosModules.nixpcHardware
         self.nixosModules.niri
-        ./temporalfix/hardware.nix
-        ./temporalfix/virt.nix
-        ./temporalfix/fonts.nix
-        ./temporalfix/gaming.nix
-        ./temporalfix/packages.nix
+        self.nixosModules.packages
+        self.nixosModules.fonts
+        self.nixosModules.gaming
+        self.nixosModules.misc
+        self.nixosModules.virt
       ];
 
       boot.kernelPackages = pkgs.pkgs.linuxPackages_6_12;
