@@ -22,6 +22,10 @@
         inherit pkgs; # THIS PART IS VERY IMPORTAINT, I FORGOT IT IN THE VIDEO!!!
         settings = {
 
+          spaw-at-startup = [
+            (lib.getExe self'.packages.myNoctalia)
+          ];
+
           prefer-no-csd = _: { };
 
           xwayland-satellite.path = lib.getExe pkgs.xwayland-satellite;
@@ -94,7 +98,7 @@
               spawn = lib.getExe pkgs.alacritty;
             };
             "Mod+Space" = {
-              spawn = lib.getExe pkgs.fuzzel;
+              spawn-sh = "${lib.getExe self'.packages.myNoctalia} ipc call launcher toggle";
             };
 
             # Overview / window management
