@@ -31,6 +31,60 @@
 
       home.file.".config/nvim".source = ./nvim;
 
+      # - START OF NVIM -
+      programs.neovim = {
+        enable = true;
+        viAlias = true;
+        vimAlias = true;
+
+        plugins = with pkgs.vimPlugins; [
+          telescope-nvim
+          plenary-nvim
+          catppuccin-vim
+          nvim-treesitter-textobjects
+
+          vim-tmux-navigator
+
+          nvim-lspconfig
+          cmp-nvim-lsp
+          nvim-cmp
+          cmp-buffer
+          cmp-path
+          cmp-cmdline
+          cmp-nvim-lsp-signature-help
+
+          (nvim-treesitter.withPlugins (p: [
+            p.bash
+            p.c
+            p.lua
+            p.python
+            p.javascript
+            p.typescript
+            p.json
+            p.html
+            p.css
+            p.markdown
+            p.markdown_inline
+            p.nix
+            p.go
+            p.rust
+          ]))
+        ];
+
+        extraPackages = with pkgs; [
+          fd
+          ripgrep
+
+          #Language Servers
+          lua-language-server
+          nil # Nix
+
+          #Formatters and linters
+          stylua
+          nixfmt
+        ];
+
+      };
       # - END OF NVIM -
 
       # - START OF TMUX -
