@@ -210,11 +210,12 @@
             "Ctrl+Alt+Delete".quit = { };
             "Mod+Shift+P".power-off-monitors = { };
 
-            "Mod+Escape" = {
-              toggle-keyboard-shortcuts-inhibit = _: {
-                props = {
-                  allow-inhibiting = false;
-                };
+            "Mod+Escape" = _: {
+              props = {
+                allow-inhibiting = false;
+              };
+              content = {
+                toggle-keyboard-shortcuts-inhibit = _: { };
               };
             };
 
