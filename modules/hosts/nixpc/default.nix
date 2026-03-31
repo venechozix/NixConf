@@ -9,7 +9,7 @@
         home-manager = {
           useGlobalPkgs = true;
           useUserPackages = true;
-          users.chozix = import ../../home/home.nix;
+          users.chozix = self.homeModules.chozixHome;
           backupFileExtension = "backup";
           extraSpecialArgs = { inherit inputs; };
         };
