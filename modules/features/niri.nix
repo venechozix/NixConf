@@ -145,10 +145,41 @@
             "Mod+Ctrl+WheelScrollDown".move-column-to-workspace-down = { };
             "Mod+Ctrl+WheelScrollUp".move-column-to-workspace-up = { };
 
-            "Mod+Shift+WheelScrollDown".focus-column-right = { };
-            "Mod+Shift+WheelScrollUp".focus-column-left = { };
-            "Mod+Ctrl+Shift+WheelScrollDown".move-column-right = { };
-            "Mod+Ctrl+Shift+WheelScrollUp".move-column-left = { };
+            "Mod+Shift+WheelScrollDown" = _: {
+              props = {
+                cooldown-ms = 150;
+              };
+              content = {
+                focus-column-right = _: { };
+              };
+            };
+
+            "Mod+Shift+WheelScrollUp" = _: {
+              props = {
+                cooldown-ms = 150;
+              };
+              content = {
+                focus-column-left = _: { };
+              };
+            };
+
+            "Mod+Ctrl+Shift+WheelScrollDown" = _: {
+              props = {
+                cooldown-ms = 150;
+              };
+              content = {
+                move-column-right = _: { };
+              };
+            };
+
+            "Mod+Ctrl+Shift+WheelScrollUp" = _: {
+              props = {
+                cooldown-ms = 150;
+              };
+              content = {
+                move-column-left = _: { };
+              };
+            };
 
             # Numbered workspaces - focus
             "Mod+1".focus-workspace = 1;
