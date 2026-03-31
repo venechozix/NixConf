@@ -83,6 +83,11 @@
               { proportion = 0.66666; }
             ];
 
+            preset-column-heights = [
+              { proportion = 0.5; }
+              { proportion = 1; }
+            ];
+
             default-column-width = {
               proportion = 0.5;
             };
@@ -111,38 +116,17 @@
             "Mod+Up".focus-window-up = { };
             "Mod+Right".focus-column-right = { };
 
-            "Mod+H".focus-column-left = { };
-            "Mod+J".focus-window-down = { };
-            "Mod+K".focus-window-up = { };
-            "Mod+L".focus-column-right = { };
-
             # Move windows/columns
             "Mod+Ctrl+Left".move-column-left = { };
             "Mod+Ctrl+Down".move-window-down = { };
             "Mod+Ctrl+Up".move-window-up = { };
             "Mod+Ctrl+Right".move-column-right = { };
 
-            "Mod+Ctrl+H".move-column-left = { };
-            "Mod+Ctrl+J".move-window-down = { };
-            "Mod+Ctrl+K".move-window-up = { };
-            "Mod+Ctrl+L".move-column-right = { };
-
-            # Column first/last
-            "Mod+Home".focus-column-first = { };
-            "Mod+End".focus-column-last = { };
-            "Mod+Ctrl+Home".move-column-to-first = { };
-            "Mod+Ctrl+End".move-column-to-last = { };
-
             # Monitor focus
             "Mod+Shift+Left".focus-monitor-left = { };
             "Mod+Shift+Down".focus-monitor-down = { };
             "Mod+Shift+Up".focus-monitor-up = { };
             "Mod+Shift+Right".focus-monitor-right = { };
-
-            "Mod+Shift+H".focus-monitor-left = { };
-            "Mod+Shift+J".focus-monitor-down = { };
-            "Mod+Shift+K".focus-monitor-up = { };
-            "Mod+Shift+L".focus-monitor-right = { };
 
             # Move column to monitor
             "Mod+Shift+Ctrl+Left".move-column-to-monitor-left = { };
@@ -203,11 +187,11 @@
             "Mod+R".switch-preset-column-width = { };
             "Mod+Shift+R".switch-preset-window-height = { };
             "Mod+Ctrl+R".reset-window-height = { };
+
             "Mod+F".maximize-column = { };
             "Mod+Shift+F".fullscreen-window = { };
             "Mod+Ctrl+F".expand-column-to-available-width = { };
-            "Mod+C".center-column = { };
-            "Mod+Ctrl+C".center-visible-columns = { };
+
             "Mod+Minus".set-column-width = "-10%";
             "Mod+Equal".set-column-width = "+10%";
             "Mod+Shift+Minus".set-window-height = "-10%";
@@ -216,18 +200,28 @@
             # Floating / tiling
             "Mod+V".toggle-window-floating = { };
             "Mod+Shift+V".switch-focus-between-floating-and-tiling = { };
+            "Mod+C".center-column = { };
+            "Mod+Ctrl+C".center-visible-columns = { };
 
             # Tabbed display
             "Mod+W".toggle-column-tabbed-display = { };
 
             # Screenshots
-            "Print".screenshot = { };
-            "Ctrl+Print".screenshot-screen = { };
+            "Mod+Shift+S".screenshot = { };
+            "Print".screenshot-screen = { };
             "Alt+Print".screenshot-window = { };
 
             "Mod+Shift+E".quit = { };
             "Ctrl+Alt+Delete".quit = { };
             "Mod+Shift+P".power-off-monitors = { };
+
+            "Mod+Escape" = {
+              toggle-keyboard-shortcuts-inhibit = { };
+              _attrs = {
+                allow-inhibiting = false;
+              };
+            };
+
           };
           cursor = {
             xcursor-theme = "catppuccin-mocha-dark-cursors";
