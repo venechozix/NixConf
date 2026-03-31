@@ -7,7 +7,7 @@
       imports = [
         self.nixosModules.nixpcHardware
         self.nixosModules.niri
-        self.nixosModules.packages
+        self.nixosModules.nixpcPackages
         self.nixosModules.fonts
         self.nixosModules.gaming
         self.nixosModules.misc
