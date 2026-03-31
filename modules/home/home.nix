@@ -28,7 +28,6 @@
         };
       };
 
-
       home.file.".config/nvim".source = ./nvim;
 
       # - START OF NVIM -
@@ -157,11 +156,11 @@
         gtk4.theme = config.gtk.theme;
       };
 
-      # dconf.settings = {
-      #   "org/gnome/desktop/interface" = {
-      #     color-scheme = "prefer-dark";
-      #   };
-      # };
+      dconf.settings = {
+        "org/gnome/desktop/interface" = {
+          color-scheme = "prefer-dark";
+        };
+      };
 
       home.packages = with pkgs; [
         inputs.zen-browser.packages."${stdenv.hostPlatform.system}".twilight
