@@ -215,6 +215,7 @@
               _ = {
                 props = {
                   allow-inhibiting = false;
+                };
               };
             };
 
