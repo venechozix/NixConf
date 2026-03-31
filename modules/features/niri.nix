@@ -211,8 +211,7 @@
             "Mod+Shift+P".power-off-monitors = { };
 
             "Mod+Escape" = {
-              toggle-keyboard-shortcuts-inhibit = { };
-              _ = {
+              toggle-keyboard-shortcuts-inhibit = _: {
                 props = {
                   allow-inhibiting = false;
                 };
