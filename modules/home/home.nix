@@ -164,10 +164,10 @@
 
       home.packages = with pkgs; [
         inputs.zen-browser.packages."${stdenv.hostPlatform.system}".twilight
-        chatterino7
         brave
         qbittorrent
         koodo-reader
+        obsidian
       ];
     };
 

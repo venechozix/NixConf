@@ -29,9 +29,6 @@
         protontricks.enable = true;
       };
 
-      programs.appimage.enable = true;
-      programs.appimage.binfmt = true;
-
       hardware.opentabletdriver = {
         enable = true;
         daemon.enable = true;
@@ -40,6 +37,7 @@
       environment.systemPackages = with pkgs; [
         #gaming
         gamescope
+        desmume
         cemu
         ryubing
         protonup-qt
@@ -47,8 +45,6 @@
         osu-lazer-bin
         lutris
         heroic-unwrapped
-        glib
-        glib-networking
         prismlauncher-unwrapped
         dconf
         vulkan-tools

@@ -24,13 +24,12 @@
         vscodium
         #utils
         file
-        ncdu
-        icu77
-        ntfs3g
-        gsettings-desktop-schemas
 
-        htop
-        pavucontrol
+        ntfs3g
+        exfatprogs
+        gparted
+        exfat
+
         fastfetch
         spotify
         vesktop
@@ -41,6 +40,7 @@
         rar
         unrar
         p7zip
+        pavucontrol
 
         kdePackages.dolphin
         wine

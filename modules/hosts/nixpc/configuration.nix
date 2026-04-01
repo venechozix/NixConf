@@ -6,12 +6,13 @@
     {
       imports = [
         self.nixosModules.nixpcHardware
-        self.nixosModules.niri
         self.nixosModules.nixpcPackages
-        self.nixosModules.fonts
+
+        self.nixosModules.desktop
         self.nixosModules.gaming
         self.nixosModules.misc
         self.nixosModules.virt
+        self.nixosModules.syncthing
       ];
 
       boot.kernelPackages = pkgs.pkgs.linuxPackages_6_12;
@@ -25,7 +26,7 @@
       boot.loader.limine.enable = true;
       boot.loader.efi.canTouchEfiVariables = true;
 
-      networking.hostName = "nixpc"; # Define your hostname.
+      networking.hostName = "nixpc";
       networking.networkmanager.enable = true;
 
       nix.settings.experimental-features = [
@@ -33,54 +34,9 @@
         "flakes"
       ];
 
-      # Set your time zone.
-      time.timeZone = "America/Montevideo";
-
-      # Select internationalisation properties.
-      i18n.defaultLocale = "en_US.UTF-8";
-
-      i18n.extraLocaleSettings = {
-        LC_ADDRESS = "es_UY.UTF-8";
-        LC_IDENTIFICATION = "es_UY.UTF-8";
-        LC_MEASUREMENT = "es_UY.UTF-8";
-        LC_MONETARY = "es_UY.UTF-8";
-        LC_NAME = "es_UY.UTF-8";
-        LC_NUMERIC = "es_UY.UTF-8";
-        LC_PAPER = "es_UY.UTF-8";
-        LC_TELEPHONE = "es_UY.UTF-8";
-        LC_TIME = "es_UY.UTF-8";
-      };
-
-      programs.zsh = {
-        enable = true;
-        enableCompletion = true;
-        autosuggestions.enable = true;
-        syntaxHighlighting.enable = true;
-
-        shellAliases = {
-          ll = "ls -l";
-          remove = "sudo nix-collect-garbage -d && sudo nix-env --profile /nix/var/nix/profiles/system --delete-generations +2";
-        };
-        histSize = 1000;
-        ohMyZsh = {
-          # "ohMyZsh" without Home Manager
-          enable = true;
-          plugins = [ "git" ];
-          theme = "nicoulaj";
-        };
-      };
+      services.hardware.openrgb.enable = true;
 
       users.defaultUserShell = pkgs.zsh;
-
-      services.syncthing = {
-        enable = true;
-        group = "syncthing";
-        user = "chozix";
-        dataDir = "/home/chozix/"; # Default folder for new synced folders
-        configDir = "/home/chozix/.config/syncthing"; # Folder for Syncthing's settings and keys
-      };
-
-      services.udisks2.enable = true;
 
       services.avahi.enable = true;
 
@@ -92,14 +48,6 @@
           "wheel"
           "syncthing"
           "docker"
-        ];
-
-        packages = with pkgs; [
-          exfatprogs
-          gparted
-          exfat
-          obsidian
-          desmume
         ];
       };
 
@@ -127,16 +75,6 @@
             "capture.auto_gain_control" = false;
           };
         };
-
-        #extraConfig.pipewire."92-low-latency" = {
-        #  "context.properties" = {
-        #    "default.clock.rate" = 48000;
-        #    "default.clock.quantum" = 32;
-        #    "default.clock.min-quantum" = 32;
-        #    "default.clock.max-quantum" = 32;
-        #  };
-        #};
-
       };
 
       nixpkgs.config.allowUnfree = true;
