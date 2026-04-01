@@ -34,7 +34,8 @@ My personal NixOS configuration, managed with Nix Flakes across multiple machine
     │       ├── default.nix
     │       ├── hardware.nix
     │       └── packages.nix
-    └── parts.nix```
+    └── parts.nix
+```
 
 ## Hosts
 
