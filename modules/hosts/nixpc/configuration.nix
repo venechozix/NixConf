@@ -21,7 +21,8 @@
       services.xserver.videoDrivers = [ "amdgpu" ];
 
       # Bootloader.
-      boot.loader.systemd-boot.enable = true;
+      # boot.loader.systemd-boot.enable = true;
+      boot.loader.limine.enable = true;
       boot.loader.efi.canTouchEfiVariables = true;
 
       networking.hostName = "nixpc"; # Define your hostname.
