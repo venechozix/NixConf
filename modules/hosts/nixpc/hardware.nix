@@ -27,6 +27,11 @@
 
       hardware.enableRedistributableFirmware = true;
 
+      boot.kernelParams = [
+        "video=DP-1:1024x1280@75"
+        "video=HMDI-A-1:1366x7680@60"
+      ];
+
       fileSystems."/" = {
         device = "/dev/disk/by-uuid/a8fe5aa5-ca1b-4571-9c09-4e9c5c164255";
         fsType = "ext4";
