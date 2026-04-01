@@ -63,6 +63,7 @@
         polkit_gnome
         ncdu
         htop
+        eog
         nautilus
         icu77
         gsettings-desktop-schemas
