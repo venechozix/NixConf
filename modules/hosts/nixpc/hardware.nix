@@ -28,7 +28,7 @@
       hardware.enableRedistributableFirmware = true;
 
       boot.kernelParams = [
-        "video=DP-1:1024x1280@60"
+        "video=DP-1:1280x1024@60"
         "video=HMDI-A-1:1366x768@60"
       ];
 
