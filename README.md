@@ -27,16 +27,7 @@ My personal NixOS configuration, managed with Nix Flakes across multiple machine
     ├── home
     │   ├── home.nix
     │   └── nvim
-    │       ├── init.lua
-    │       └── lua
-    │           ├── config
-    │           │   └── keymaps.lua
-    │           └── plugins
-    │               ├── cmp.lua
-    │               ├── format.lua
-    │               ├── lsp.lua
-    │               ├── telescope.lua
-    │               └── treesitter.lua
+    │       └── nvim configs...
     ├── hosts
     │   └── nixpc
     │       ├── configuration.nix
@@ -45,14 +36,11 @@ My personal NixOS configuration, managed with Nix Flakes across multiple machine
     │       └── packages.nix
     └── parts.nix```
 
-> Adjust the tree above to match your actual layout.
-
 ## Hosts
 
 | Hostname | Description |
 |----------|-------------|
-| `host1`  | Desktop / main workstation |
-| `host2`  | Laptop / portable setup |
+| `nixpc`  | Desktop  |
 
 ## Applying Configuration
 
@@ -62,8 +50,3 @@ Rebuild a specific host:
 sudo nixos-rebuild switch --flake .#hostname
 ```
 
-Update flake inputs:
-
-```bash
-nix flake update
-```
