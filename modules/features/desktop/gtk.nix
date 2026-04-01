@@ -8,19 +8,11 @@
       ...
     }:
     let
-      theme-name = "Gruvbox-Green-Dark-Medium";
-      theme-package = pkgs.gruvbox-gtk-theme.override {
-        colorVariants = [ "dark" ];
-        sizeVariants = [ "standard" ];
-        themeVariants = [ "green" ];
-        tweakVariants = [
-          "medium"
-          "macos"
-        ];
-      };
+      theme-name = "Adwaita-dark";
+      theme-package = pkgs.gnome-themes-extra;
 
-      icon-theme-package = pkgs.gruvbox-plus-icons;
-      icon-theme-name = "Gruvbox-Plus-Dark";
+      icon-theme-package = pkgs.adwaita-icon-theme;
+      icon-theme-name = "Adwaita";
 
       gtksettings = ''
         [Settings]
