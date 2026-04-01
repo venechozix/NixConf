@@ -1,6 +1,6 @@
 # ❄️My NixOS Configuration
 
-My personal NixOS configuration, managed with Nix Flakes across multiple machines.
+My personal NixOS configuration, managed with Flake parts across multiple machines.
 
 ![](https://i.imgur.com/ExFk10S.png)
 
