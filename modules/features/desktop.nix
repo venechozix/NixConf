@@ -10,6 +10,8 @@
         self.nixosModules.gtk
       ];
 
+      security.polkit.enable = true;
+
       services.flatpak.enable = true;
 
       programs.appimage.enable = true;
@@ -58,8 +60,10 @@
       };
 
       environment.systemPackages = with pkgs; [
+        polkit_gnome
         ncdu
         htop
+        nautilus
         icu77
         gsettings-desktop-schemas
         glib
