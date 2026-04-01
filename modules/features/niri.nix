@@ -140,11 +140,40 @@
             "Mod+Shift+U".move-workspace-up = { };
 
             # Scroll workspace/column navigation
-            "Mod+WheelScrollDown".focus-workspace-down = { };
-            "Mod+WheelScrollUp".focus-workspace-up = { };
-            "Mod+Ctrl+WheelScrollDown".move-column-to-workspace-down = { };
-            "Mod+Ctrl+WheelScrollUp".move-column-to-workspace-up = { };
+            "Mod+WheelScrollDown" = _: {
+              props = {
+                cooldown-ms = 150;
+              };
+              content = {
+                focus-workspace-down = _: { };
+              };
+            };
 
+            "Mod+WheelScrollUp" = _: {
+              props = {
+                cooldown-ms = 150;
+              };
+              content = {
+                focus-workspace-up = _: { };
+              };
+            };
+
+            "Mod+Ctrl+WheelScrollUp" = _: {
+              props = {
+                cooldown-ms = 150;
+              };
+              content = {
+                move-column-to-workspace-up = _: { };
+              };
+            };
+            "Mod+Ctrl+WheelScrollDown" = _: {
+              props = {
+                cooldown-ms = 150;
+              };
+              content = {
+                move-column-to-workspace-down = _: { };
+              };
+            };
             "Mod+Shift+WheelScrollDown" = _: {
               props = {
                 cooldown-ms = 150;
