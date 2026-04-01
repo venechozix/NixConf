@@ -137,31 +137,6 @@
         size = 24;
       };
 
-      gtk = {
-        enable = true;
-
-        theme = {
-          name = "Adwaita-dark";
-          package = pkgs.gnome-themes-extra;
-        };
-
-        iconTheme = {
-          name = "Adwaita";
-          package = pkgs.adwaita-icon-theme;
-        };
-
-        gtk3.extraConfig = {
-          gtk-application-prefer-dark-theme = true;
-        };
-        gtk4.theme = config.gtk.theme;
-      };
-
-      dconf.settings = {
-        "org/gnome/desktop/interface" = {
-          color-scheme = "prefer-dark";
-        };
-      };
-
       home.packages = with pkgs; [
         inputs.zen-browser.packages."${stdenv.hostPlatform.system}".twilight
         brave
