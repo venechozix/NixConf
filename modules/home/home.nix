@@ -77,6 +77,7 @@
           #Language Servers
           lua-language-server
           nil # Nix
+          clangd-tools
 
           #Formatters and linters
           stylua
