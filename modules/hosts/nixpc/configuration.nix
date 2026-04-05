@@ -48,6 +48,7 @@
           "wheel"
           "syncthing"
           "docker"
+          "input"
         ];
       };
 
