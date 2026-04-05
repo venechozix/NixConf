@@ -45,6 +45,7 @@
 
         kdePackages.dolphin
         wine
+        wine64
         winetricks
         wine64Packages.waylandFull
         obs-studio
