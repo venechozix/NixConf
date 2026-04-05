@@ -25,6 +25,7 @@
         #utils
         file
 
+        pince
         ntfs3g
         exfatprogs
         gparted
