@@ -49,6 +49,7 @@
           "syncthing"
           "docker"
           "input"
+          "tty"
         ];
       };
 
