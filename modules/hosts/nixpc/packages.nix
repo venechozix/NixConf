@@ -24,7 +24,7 @@
         vscodium
         #utils
         file
-
+        libGL
         pince
         ntfs3g
         exfatprogs
