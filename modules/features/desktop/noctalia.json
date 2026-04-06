@@ -6,7 +6,7 @@
       "position": "top",
       "monitors": [],
       "density": "default",
-      "showOutline": true,
+      "showOutline": false,
       "showCapsule": true,
       "capsuleOpacity": 1,
       "capsuleColorKey": "none",
@@ -134,13 +134,19 @@
             "textColor": "none"
           },
           {
+            "displayMode": "onhover",
+            "iconColor": "none",
+            "id": "Bluetooth",
+            "textColor": "none"
+          },
+          {
             "colorizeDistroLogo": false,
             "colorizeSystemIcon": "none",
             "customIconPath": "",
             "enableColorization": false,
             "icon": "noctalia",
             "id": "ControlCenter",
-            "useDistroLogo": false
+            "useDistroLogo": true
           }
         ]
       },
@@ -157,7 +163,7 @@
     },
     "general": {
       "avatarImage": "/home/chozix/Pictures/335e9bad4fcf897520ea691216e970a7.jpg",
-      "dimmerOpacity": 0.2,
+      "dimmerOpacity": 0.1,
       "showScreenCorners": false,
       "forceBlackScreenCorners": false,
       "scaleRatio": 0.8500000000000001,
@@ -226,11 +232,11 @@
       "tooltipsEnabled": false,
       "scrollbarAlwaysVisible": true,
       "boxBorderEnabled": false,
-      "panelBackgroundOpacity": 0.93,
+      "panelBackgroundOpacity": 1,
       "translucentWidgets": false,
       "panelsAttachedToBar": true,
       "settingsPanelMode": "attached",
-      "settingsPanelSideBarCardStyle": false
+      "settingsPanelSideBarCardStyle": true
     },
     "location": {
       "name": "Montevideo, Uruguay",
@@ -691,8 +697,8 @@
     "openedPanel": "",
     "lockScreenActive": false,
     "wallpapers": {
-      "DP-1": "/home/chozix/Pictures/wallpapers/Vertical/HCpEvGQbMAAY_pK.jpg",
-      "HDMI-A-1": "/home/chozix/Pictures/wallpapers/Horizontal/HDZ5tUJbkAAxAkQ.png"
+      "DP-1": "/home/chozix/Pictures/wallpapers/Vertical/HE4rePKbAAAmg2W.jpg",
+      "HDMI-A-1": "/home/chozix/Pictures/wallpapers/Horizontal/IMG_5199.png"
     },
     "desktopWidgetsEditMode": false,
     "display": {
@@ -728,7 +734,7 @@
       }
     },
     "notificationsState": {
-      "lastSeenTs": 0
+      "lastSeenTs": 1775084211000
     },
     "changelogState": {
       "lastSeenVersion": "v4.7.1"
