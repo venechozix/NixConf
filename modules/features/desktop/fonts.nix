@@ -37,7 +37,7 @@
         oxygenfonts
         montserrat
         poppins
-        comic-mono-font
+        comic-mono
 
         # ===== Serif =====
         noto-fonts-cjk-serif
