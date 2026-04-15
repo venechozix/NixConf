@@ -7,6 +7,7 @@
 
       environment.systemPackages = with pkgs; [
         bluetui
+        mkchromecast
       ];
 
       services.avahi.enable = true;
