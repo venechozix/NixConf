@@ -9,6 +9,8 @@
         bluetui
       ];
 
+      services.avahi.enable = true;
+
       hardware.bluetooth = {
         enable = true;
         powerOnBoot = true;
