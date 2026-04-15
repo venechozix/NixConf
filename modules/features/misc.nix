@@ -8,6 +8,7 @@
       environment.systemPackages = with pkgs; [
         bluetui
         mkchromecast
+        ffmpeg
       ];
 
       services.avahi.enable = true;
