@@ -9,6 +9,7 @@
         bluetui
         mkchromecast
         ffmpeg
+        chromium
       ];
 
       services.avahi.enable = true;
