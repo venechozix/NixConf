@@ -35,6 +35,8 @@
         enable = true;
         viAlias = true;
         vimAlias = true;
+        withPython3 = true;
+        withRuby = false;
 
         plugins = with pkgs.vimPlugins; [
           telescope-nvim
