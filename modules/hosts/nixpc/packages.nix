@@ -43,6 +43,8 @@
         p7zip
         pavucontrol
 
+        droidcam
+
         kdePackages.dolphin
         wine
         wine64
