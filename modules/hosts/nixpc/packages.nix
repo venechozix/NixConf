@@ -43,6 +43,7 @@
         p7zip
         pavucontrol
 
+        droidcam
         obs-studio-plugins.droidcam-obs
 
         kdePackages.dolphin
