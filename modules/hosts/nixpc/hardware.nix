@@ -22,7 +22,10 @@
         "sd_mod"
       ];
       boot.initrd.kernelModules = [ "amdgpu" ];
-      boot.kernelModules = [ "i2c-dev" ];
+      boot.kernelModules = [
+        "i2c-dev"
+        "v4l2loopback"
+      ];
       boot.extraModulePackages = [ ];
 
       hardware.enableRedistributableFirmware = true;
