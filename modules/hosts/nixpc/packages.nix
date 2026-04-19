@@ -5,6 +5,14 @@
     { config, pkgs, ... }:
     {
 
+      programs.obs-studio = {
+        enable = true;
+        enableVirtualCamera = true;
+        plugins = with pkgs.obs-studio-plugins; [
+          droidcam-obs
+        ];
+      };
+
       environment.systemPackages = with pkgs; [
         #dev
         android-tools
@@ -44,14 +52,11 @@
         pavucontrol
 
         droidcam
-        obs-studio-plugins.droidcam-obs
 
         kdePackages.dolphin
         wine
         wine64
         winetricks
-        wine64Packages.waylandFull
-        obs-studio
         gimp
         vlc
         openrgb-with-all-plugins
