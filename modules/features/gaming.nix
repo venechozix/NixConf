@@ -43,7 +43,6 @@
         protonup-qt
         opentabletdriver
         osu-lazer-bin
-        lutris
         heroic-unwrapped
         prismlauncher-unwrapped
         dconf
