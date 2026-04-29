@@ -5,6 +5,7 @@
     { pkgs, ... }:
     {
       fonts.packages = with pkgs; [
+        adwaita-fonts
         noto-fonts
         noto-fonts-cjk-sans
         # ===== Monospace / Coding =====
