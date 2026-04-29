@@ -41,6 +41,7 @@
         cemu
         ryubing
         protonup-qt
+        protonplus
         opentabletdriver
         osu-lazer-bin
         heroic-unwrapped
