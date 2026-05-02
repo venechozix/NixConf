@@ -34,6 +34,10 @@
         daemon.enable = true;
       };
 
+      services.zerotierone = {
+        enable = true;
+      };
+
       environment.systemPackages = with pkgs; [
         #gaming
         gamescope
