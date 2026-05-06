@@ -52,6 +52,7 @@
         pavucontrol
 
         droidcam
+        openvpn3
 
         kdePackages.dolphin
         wine
