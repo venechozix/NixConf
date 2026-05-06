@@ -35,7 +35,7 @@
           } # mkchromecast default streaming port
         ];
       };
-
+      hardware.enableAllFirmware = true;
       hardware.enableRedistributableFirmware = true;
       hardware.bluetooth = {
         enable = true;
