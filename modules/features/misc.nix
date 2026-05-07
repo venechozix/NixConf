@@ -7,8 +7,6 @@
 
       environment.systemPackages = with pkgs; [
         bluetui
-        mkchromecast
-        ffmpeg
         chromium
       ];
 
