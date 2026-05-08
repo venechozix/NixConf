@@ -47,7 +47,7 @@
         protonup-qt
         protonplus
         opentabletdriver
-        osu-lazer-bin
+        inputs.nix-gaming.packages.${pkgs.stdenv.hostPlatform.system}.osu-lazer-bin
         heroic-unwrapped
         prismlauncher-unwrapped
         dconf
