@@ -53,7 +53,7 @@
         shellAliases = {
           cat = "bat";
           ll = "ls -l";
-          rebuild = "sudo nixos-rebuild switch --flake /home/sauce/rew#nixpc";
+          rebuild = "sudo nixos-rebuild switch --flake /home/sauce/rew#saucepc";
           fupdate = "nix flake update --flake /home/sauce/rew";
           remove = "sudo nix-collect-garbage -d && sudo nix-env --profile /nix/var/nix/profiles/system --delete-generations +2";
         };
