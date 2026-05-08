@@ -1,7 +1,7 @@
 { self, inputs, ... }:
 {
 
-  flake.homeModules.chozixHome =
+  flake.homeModules.chozix =
     {
       config,
       lib,

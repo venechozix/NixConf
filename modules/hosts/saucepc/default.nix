@@ -10,7 +10,7 @@
         home-manager = {
           useGlobalPkgs = true;
           useUserPackages = true;
-          users.sauce = self.homeModules.sauceHome;
+          users.sauce = self.homeModules.sauce;
           backupFileExtension = "backup";
           extraSpecialArgs = { inherit inputs; };
         };

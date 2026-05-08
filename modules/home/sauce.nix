@@ -1,7 +1,7 @@
 { self, inputs, ... }:
 {
 
-  flake.homeModules.sauceHome =
+  flake.homeModules.sauce =
     {
       config,
       lib,
