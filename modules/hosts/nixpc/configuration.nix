@@ -8,7 +8,7 @@
         self.nixosModules.nixpcHardware
         self.nixosModules.nixpcPackages
 
-        self.nixosModules.desktop
+        self.nixosModules.chozixDesktop
         self.nixosModules.gaming
         self.nixosModules.misc
         self.nixosModules.virt

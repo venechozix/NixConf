@@ -1,7 +1,7 @@
 { self, ... }:
 {
 
-  flake.nixosModules.chozixDesktop =
+  flake.nixosModules.sauceDesktop =
     { pkgs, ... }:
     {
       imports = [
@@ -18,25 +18,32 @@
       programs.appimage.binfmt = true;
 
       # Set your time zone.
-      time.timeZone = "America/Montevideo";
+
+      time.timeZone = "America/Santiago";
 
       # Select internationalisation properties.
       i18n.defaultLocale = "en_US.UTF-8";
 
       i18n.extraLocaleSettings = {
-        LC_ADDRESS = "es_UY.UTF-8";
-        LC_IDENTIFICATION = "es_UY.UTF-8";
-        LC_MEASUREMENT = "es_UY.UTF-8";
-        LC_MONETARY = "es_UY.UTF-8";
-        LC_NAME = "es_UY.UTF-8";
-        LC_NUMERIC = "es_UY.UTF-8";
-        LC_PAPER = "es_UY.UTF-8";
-        LC_TELEPHONE = "es_UY.UTF-8";
-        LC_TIME = "es_UY.UTF-8";
+        LC_ADDRESS = "es_CL.UTF-8";
+        LC_IDENTIFICATION = "es_CL.UTF-8";
+        LC_MEASUREMENT = "es_CL.UTF-8";
+        LC_MONETARY = "es_CL.UTF-8";
+        LC_NAME = "es_CL.UTF-8";
+        LC_NUMERIC = "es_CL.UTF-8";
+        LC_PAPER = "es_CL.UTF-8";
+        LC_TELEPHONE = "es_CL.UTF-8";
+        LC_TIME = "es_CL.UTF-8";
       };
-
       services.udisks2.enable = true;
 
+      services.xserver.xkb = {
+        layout = "latam";
+        variant = "";
+      };
+
+      # Configure console keymap
+      console.keyMap = "la-latin1";
       programs.zsh = {
         enable = true;
         enableCompletion = true;
@@ -46,8 +53,8 @@
         shellAliases = {
           cat = "bat";
           ll = "ls -l";
-          rebuild = "sudo nixos-rebuild switch --flake /home/chozix/rew#nixpc";
-          fupdate = "nix flake update --flake /home/chozix/rew";
+          rebuild = "sudo nixos-rebuild switch --flake /home/sauce/rew#nixpc";
+          fupdate = "nix flake update --flake /home/sauce/rew";
           remove = "sudo nix-collect-garbage -d && sudo nix-env --profile /nix/var/nix/profiles/system --delete-generations +2";
         };
         histSize = 1000;
