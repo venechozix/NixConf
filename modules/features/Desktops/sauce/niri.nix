@@ -1,12 +1,12 @@
 { self, inputs, ... }:
 {
 
-  flake.nixosModules.chozixNiri =
+  flake.nixosModules.sauceNiri =
     { pkgs, lib, ... }:
     {
       programs.niri = {
         enable = true;
-        package = self.packages.${pkgs.stdenv.hostPlatform.system}.niriCho;
+        package = self.packages.${pkgs.stdenv.hostPlatform.system}.niriSauce;
       };
     };
 
@@ -18,12 +18,12 @@
       ...
     }:
     {
-      packages.niriCho = inputs.wrapper-modules.wrappers.niri.wrap {
+      packages.niriSauce = inputs.wrapper-modules.wrappers.niri.wrap {
         inherit pkgs; # THIS PART IS VERY IMPORTAINT, I FORGOT IT IN THE VIDEO!!!
         settings = {
 
           spawn-at-startup = [
-            (lib.getExe self'.packages.myNoctalia)
+            (lib.getExe self'.packages.sauceNoctalia)
           ];
 
           prefer-no-csd = _: { };
@@ -41,23 +41,11 @@
 
           outputs = {
             "DP-1" = {
-              mode = "1280x1024@75.025";
+              mode = "1920x1080@165.000";
               position = _: {
                 props = {
                   x = 0;
                   y = 0;
-                };
-              };
-              scale = 1;
-              transform = "90";
-            };
-
-            "HDMI-A-1" = {
-              mode = "1366x768@59.790";
-              position = _: {
-                props = {
-                  x = 1024;
-                  y = 408;
                 };
               };
               scale = 1;
@@ -67,7 +55,7 @@
           };
 
           layout = {
-            gaps = 10;
+            gaps = 16;
             border = {
               off = _: { };
             };
@@ -98,7 +86,7 @@
               spawn = lib.getExe pkgs.alacritty;
             };
             "Mod+Space" = {
-              spawn-sh = "${lib.getExe self'.packages.myNoctalia} ipc call launcher toggle";
+              spawn-sh = "${lib.getExe self'.packages.sauceNoctalia} ipc call launcher toggle";
             };
 
             # Overview / window management

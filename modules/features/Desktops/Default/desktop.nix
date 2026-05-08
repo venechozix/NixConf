@@ -1,7 +1,7 @@
 { self, ... }:
 {
 
-  flake.nixosModules.chozixDesktop =
+  flake.nixosModules.desktop =
     { pkgs, ... }:
     {
       imports = [

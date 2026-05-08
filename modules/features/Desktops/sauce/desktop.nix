@@ -5,7 +5,7 @@
     { pkgs, ... }:
     {
       imports = [
-        self.nixosModules.niri
+        self.nixosModules.sauceNiri
         self.nixosModules.fonts
         self.nixosModules.gtk
       ];
