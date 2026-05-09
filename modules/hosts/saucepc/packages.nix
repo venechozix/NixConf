@@ -5,6 +5,8 @@
     { config, pkgs, ... }:
     {
 
+      nixpkgs.overlays = [ inputs.helium-flake.overlays.default ];
+
       environment.systemPackages = with pkgs; [
         #dev
         libgccjit
