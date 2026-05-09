@@ -55,6 +55,7 @@
         openvpn3
         openvpn
 
+        helium
         kdePackages.dolphin
         wine
         wine64
