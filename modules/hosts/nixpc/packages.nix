@@ -38,6 +38,7 @@
         pyenv
         vscodium
         #utils
+        woeusb
         file
         libGL
         pince
