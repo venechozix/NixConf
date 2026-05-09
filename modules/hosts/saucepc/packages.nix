@@ -5,14 +5,6 @@
     { config, pkgs, ... }:
     {
 
-      programs.zsh.enable = true;
-
-      programs.appimage.enable = true;
-      programs.appimage.binfmt = true;
-
-      nixpkgs.config.permittedInsecurePackages = [
-        "python3.13-youtube-dl-2021.12.17"
-      ];
       environment.systemPackages = with pkgs; [
         #dev
         libgccjit
