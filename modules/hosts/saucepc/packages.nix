@@ -2,10 +2,13 @@
 {
 
   flake.nixosModules.saucepcPackages =
-    { config, pkgs, ... }:
     {
-
-      nixpkgs.overlays = [ inputs.helium-flake.overlays.default ];
+      config,
+      pkgs,
+      inputs,
+      ...
+    }:
+    {
 
       environment.systemPackages = with pkgs; [
         #dev

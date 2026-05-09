@@ -1,8 +1,13 @@
-{ self, inptus, ... }:
+{ self, inputs, ... }:
 {
 
   flake.nixosModules.nixpcPackages =
-    { config, pkgs, ... }:
+    {
+      config,
+      pkgs,
+      inputs,
+      ...
+    }:
     {
 
       programs.obs-studio = {
@@ -12,6 +17,8 @@
           droidcam-obs
         ];
       };
+
+      nixpkgs.overlays = [ inputs.helium-flake.overlays.default ];
 
       environment.systemPackages = with pkgs; [
         #dev
