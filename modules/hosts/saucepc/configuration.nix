@@ -11,7 +11,6 @@
 
         self.nixosModules.sauceDesktop
         self.nixosModules.gaming
-        self.nixosModules.virt
 
       ];
 
