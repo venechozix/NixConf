@@ -47,6 +47,7 @@
         pulse.enable = true;
       };
 
+      users.defaultUserShell = pkgs.zsh;
       # Define a user account. Don't forget to set a password with ‘passwd’.
       users.users.sauce = {
         isNormalUser = true;
