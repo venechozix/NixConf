@@ -23,7 +23,7 @@
         "usbhid"
         "sd_mod"
       ];
-      boot.initrd.kernelmodules = [ "amdgpu" ];
+      boot.initrd.kernelModules = [ "amdgpu" ];
       boot.kernelModules = [ "kvm-intel" ];
       boot.extraModulePackages = [ ];
 
