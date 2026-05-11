@@ -258,6 +258,15 @@
             "Ctrl+Alt+Delete".quit = { };
             "Mod+Shift+P".power-off-monitors = { };
 
+            "XF86AudioRaiseVolume" = _: {
+              props = {
+                allow-when-locked = true;
+              };
+              content = {
+                spawn-sh = "wpctl set-volume @DEFAULT_AUDIO_SINK@ 0.1+ -l 1.5";
+              };
+            };
+
             "Mod+Escape" = _: {
               props = {
                 allow-inhibiting = false;
