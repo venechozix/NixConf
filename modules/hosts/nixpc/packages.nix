@@ -46,6 +46,7 @@
         exfatprogs
         gparted
         exfat
+        f3
 
         fastfetch
         spotify
