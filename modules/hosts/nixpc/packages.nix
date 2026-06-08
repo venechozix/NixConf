@@ -60,6 +60,7 @@
         p7zip
         pavucontrol
 
+        reaper
         droidcam
         openvpn3
         openvpn
