@@ -64,6 +64,7 @@
         openvpn3
         openvpn
 
+        audacity
         helium
         kdePackages.dolphin
         wine
