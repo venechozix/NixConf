@@ -59,7 +59,6 @@
         unar
         playerctl
         gamemode
-        discord
       ];
     };
 
