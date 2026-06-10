@@ -22,6 +22,7 @@
 
       environment.systemPackages = with pkgs; [
         #dev
+        zed-editor-fhs
         android-tools
         libgccjit
         vim
