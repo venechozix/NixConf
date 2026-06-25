@@ -55,6 +55,7 @@
         vesktop
         keepassxc
 
+        teamspeak6-client
         zip
         unzip
         rar
