@@ -48,6 +48,7 @@
         gparted
         exfat
         f3
+        cmatrix
 
         fastfetch
         spotify
