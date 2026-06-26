@@ -76,6 +76,8 @@
         gimp
         vlc
         openrgb-with-all-plugins
+
+        ventoy-full-gtk
         parsec-bin
       ];
 
