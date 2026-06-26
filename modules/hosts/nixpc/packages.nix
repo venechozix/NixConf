@@ -19,7 +19,9 @@
       };
 
       nixpkgs.overlays = [ inputs.helium-flake.overlays.default ];
-
+      nixpkgs.config.permittedInsecurePackages = [
+        "ventoy-gtk3-1.1.12"
+      ];
       environment.systemPackages = with pkgs; [
         #dev
         zed-editor-fhs
