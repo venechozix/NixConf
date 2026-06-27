@@ -52,6 +52,8 @@
         f3
         cmatrix
 
+        inputs.DuckGameRebuilt.packages.x86_64-linux.default
+
         fastfetch
         spotify
         vesktop
