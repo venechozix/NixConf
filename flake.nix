@@ -12,10 +12,6 @@
 
     wrapper-modules.url = "github:BirdeeHub/nix-wrapper-modules";
 
-    DuckGameRebuilt = {
-      url = "github:klof44/DuckGameRebuilt-Nix";
-      inputs.nixpkgs.follows = "nixpkgs";
-    };
     aagl = {
       url = "github:ezKEa/aagl-gtk-on-nix";
       inputs.nixpkgs.follows = "nixpkgs";
