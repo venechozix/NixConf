@@ -226,7 +226,8 @@
           "Del"
         ]
       },
-      "reverseScroll": false
+      "reverseScroll": false,
+      "smoothScrollEnabled": true
     },
     "ui": {
       "fontDefault": "JetBrains Mono",
@@ -243,9 +244,10 @@
       "settingsPanelSideBarCardStyle": true
     },
     "location": {
-      "name": "Montevideo, Uruguay",
+      "name": "Santiago",
       "weatherEnabled": true,
       "weatherShowEffects": true,
+      "weatherTaliaMascotAlways": false,
       "useFahrenheit": false,
       "use12hourFormat": false,
       "showWeekNumberInCalendar": false,
@@ -254,7 +256,8 @@
       "analogClockInCalendar": false,
       "firstDayOfWeek": -1,
       "hideWeatherTimezone": false,
-      "hideWeatherCityName": false
+      "hideWeatherCityName": false,
+      "autoLocate": true
     },
     "calendar": {
       "cards": [
@@ -292,6 +295,7 @@
       "showHiddenFiles": false,
       "viewMode": "browse",
       "setWallpaperOnAllMonitors": false,
+      "linkLightAndDarkWallpapers": true,
       "fillMode": "crop",
       "fillColor": "#000000",
       "useSolidColor": false,
@@ -475,7 +479,6 @@
       "indicatorOpacity": 0.6
     },
     "network": {
-      "airplaneModeEnabled": false,
       "bluetoothRssiPollingEnabled": false,
       "bluetoothRssiPollIntervalMs": 60000,
       "networkPanelView": "wifi",
@@ -623,7 +626,8 @@
       "manualSunrise": "06:30",
       "manualSunset": "18:30",
       "generationMethod": "tonal-spot",
-      "monitorForColors": ""
+      "monitorForColors": "",
+      "syncGsettings": true
     },
     "templates": {
       "activeTemplates": [],
@@ -701,47 +705,31 @@
     "openedPanel": "",
     "lockScreenActive": false,
     "wallpapers": {
-      "DP-1": "/home/chozix/Pictures/wallpapers/Vertical/HE4rePJb0AAUqQw.jpg",
-      "HDMI-A-1": "/home/chozix/Pictures/wallpapers/Horizontal/HC090fZbcAALk04.jpg"
+      "DP-1": "/home/sauce/Pictures/wallpapers/asd.jpeg"
     },
     "desktopWidgetsEditMode": false,
     "display": {
-      "HDMI-A-1": {
-        "name": "HDMI-A-1",
-        "connected": true,
-        "scale": 1,
-        "width": 1366,
-        "height": 768,
-        "x": 1024,
-        "y": 408,
-        "physical_width": 410,
-        "physical_height": 230,
-        "refresh_rate": 59790,
-        "vrr_supported": false,
-        "vrr_enabled": false,
-        "transform": "Normal"
-      },
       "DP-1": {
         "name": "DP-1",
         "connected": true,
         "scale": 1,
-        "width": 1024,
-        "height": 1280,
+        "width": 1920,
+        "height": 1080,
         "x": 0,
         "y": 0,
-        "physical_width": 380,
+        "physical_width": 560,
         "physical_height": 300,
-        "refresh_rate": 75025,
+        "refresh_rate": 165000,
         "vrr_supported": false,
         "vrr_enabled": false,
-        "transform": "90"
+        "transform": "Normal"
       }
     },
     "notificationsState": {
-      "lastSeenTs": 1775447274000
+      "lastSeenTs": 1778538431000
     },
     "changelogState": {
-      "lastSeenVersion": "v4.7.1"
+      "lastSeenVersion": "v4.7.6"
     },
     "colorSchemesList": {
       "schemes": [],
