@@ -63,7 +63,7 @@
         rar
         (retroarch.withCores (
           cores: with cores; [
-            gpSP
+            gpsp
           ]
         ))
         unrar
