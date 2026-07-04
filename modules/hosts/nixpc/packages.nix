@@ -61,7 +61,11 @@
         zip
         unzip
         rar
-        retroarch-full
+        (retroarch.withCores (
+          cores: with cores; [
+            gpSP
+          ]
+        ))
         unrar
         p7zip
         pavucontrol
