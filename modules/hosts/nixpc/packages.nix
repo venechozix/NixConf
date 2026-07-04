@@ -68,7 +68,7 @@
         droidcam
         openvpn3
         openvpn
-
+        mgba
         audacity
         helium
         kdePackages.dolphin
