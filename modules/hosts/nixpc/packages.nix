@@ -61,6 +61,7 @@
         zip
         unzip
         rar
+        retroarch
         unrar
         p7zip
         pavucontrol
