@@ -49,7 +49,7 @@
         opentabletdriver
         osu-lazer-bin
         heroic-unwrapped
-        prismlauncher-unwrapped
+        prismlauncher
         dconf
         vulkan-tools
         vulkan-loader
