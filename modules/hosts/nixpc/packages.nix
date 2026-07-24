@@ -83,7 +83,7 @@
         gimp
         vlc
         openrgb-with-all-plugins
-        moonlight
+        moonlight-qt
         ventoy-full-gtk
         parsec-bin
       ];
