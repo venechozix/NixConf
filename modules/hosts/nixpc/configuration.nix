@@ -43,7 +43,12 @@
       users.defaultUserShell = pkgs.zsh;
 
       services.avahi.enable = true;
-      services.printing.enable = true;
+
+      services.printing = {
+        enable = true;
+        drivers = [ pkgs.splix ];
+      };
+
       users.users.chozix = {
         isNormalUser = true;
         description = "Jesus";
