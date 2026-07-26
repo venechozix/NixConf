@@ -43,7 +43,7 @@
       users.defaultUserShell = pkgs.zsh;
 
       services.avahi.enable = true;
-
+      services.printing.enable = true;
       users.users.chozix = {
         isNormalUser = true;
         description = "Jesus";
