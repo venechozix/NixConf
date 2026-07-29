@@ -23,6 +23,7 @@
         "ventoy-gtk3-1.1.12"
       ];
       environment.systemPackages = with pkgs; [
+
         #dev
         zed-editor-fhs
         android-tools
@@ -40,6 +41,7 @@
         python314
         pyenv
         vscodium
+
         #utils
         woeusb
         file
@@ -61,11 +63,6 @@
         zip
         unzip
         rar
-        (retroarch.withCores (
-          cores: with cores; [
-            gpsp
-          ]
-        ))
         unrar
         p7zip
         pavucontrol
@@ -73,7 +70,6 @@
         droidcam
         openvpn3
         openvpn
-        mgba
         audacity
         helium
         kdePackages.dolphin
