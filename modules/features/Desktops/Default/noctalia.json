@@ -30,6 +30,7 @@
       "left": [
         {
           "colorizeSystemIcon": "none",
+          "colorizeSystemText": "none",
           "customIconPath": "",
           "enableColorization": false,
           "icon": "rocket",
@@ -146,6 +147,7 @@
         {
           "colorizeDistroLogo": false,
           "colorizeSystemIcon": "none",
+          "colorizeSystemText": "none",
           "customIconPath": "",
           "enableColorization": false,
           "icon": "noctalia",
@@ -300,7 +302,7 @@
     "fillColor": "#000000",
     "useSolidColor": false,
     "solidColor": "#1a92be",
-    "automationEnabled": true,
+    "automationEnabled": false,
     "wallpaperChangeMode": "random",
     "randomIntervalSec": 600,
     "transitionDuration": 1500,
@@ -320,7 +322,7 @@
     "overviewBlur": 0.4,
     "overviewTint": 0.6,
     "useWallhaven": false,
-    "wallhavenQuery": "",
+    "wallhavenQuery": "manhattan cafe",
     "wallhavenSorting": "relevance",
     "wallhavenOrder": "desc",
     "wallhavenCategories": "111",
@@ -698,5 +700,4 @@
     ]
   }
 }
-
 }
