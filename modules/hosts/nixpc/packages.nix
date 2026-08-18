@@ -59,6 +59,8 @@
         vesktop
         keepassxc
 
+        gammastep
+
         teamspeak6-client
         zip
         unzip
