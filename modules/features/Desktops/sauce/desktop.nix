@@ -76,6 +76,8 @@
         gsettings-desktop-schemas
         glib
         glib-networking
+
+        gammastep
       ];
 
     };
