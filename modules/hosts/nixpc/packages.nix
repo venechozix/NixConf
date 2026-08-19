@@ -22,6 +22,11 @@
       nixpkgs.config.permittedInsecurePackages = [
         "ventoy-gtk3-1.1.12"
       ];
+      programs.kdeconnect = {
+        enable = true;
+        package = pkgs.gnomeExtensions.gsconnect;
+      };
+
       environment.systemPackages = with pkgs; [
 
         #dev
@@ -43,7 +48,6 @@
         vscodium
 
         #utils
-        kdePackages.kdeconnect-kde
         woeusb
         file
         libGL
