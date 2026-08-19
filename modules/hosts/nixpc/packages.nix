@@ -43,6 +43,7 @@
         vscodium
 
         #utils
+        kdePackages.kdeconnect-kde
         woeusb
         file
         libGL
