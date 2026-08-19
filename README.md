@@ -11,30 +11,45 @@ My personal NixOS configuration, managed with Flake parts across multiple machin
 ├── flake.lock
 ├── flake.nix
 ├── LICENSE
-└── modules
-    ├── features
-    │   ├── desktop # Packages needed by the desktop.nix file
-    │   │   ├── fonts.nix
-    │   │   ├── gtk.nix
-    │   │   ├── niri.nix
-    │   │   ├── noctalia.json
-    │   │   └── noctalia.nix
-    │   ├── desktop.nix
-    │   ├── gaming.nix
-    │   ├── misc.nix
-    │   ├── syncthing.nix
-    │   └── virt.nix
-    ├── home
-    │   ├── home.nix
-    │   └── nvim
-    │       └── nvim configs...
-    ├── hosts
-    │   └── nixpc
-    │       ├── configuration.nix
-    │       ├── default.nix
-    │       ├── hardware.nix
-    │       └── packages.nix
-    └── parts.nix
+├── modules
+│   ├── features
+│   │   ├── Desktops
+│   │   │   ├── Default
+│   │   │   │   ├── desktop.nix
+│   │   │   │   ├── fonts.nix
+│   │   │   │   ├── gtk.nix
+│   │   │   │   ├── niri.nix
+│   │   │   │   ├── noctalia.json
+│   │   │   │   └── noctalia.nix
+│   │   │   └── sauce
+│   │   │       ├── desktop.nix
+│   │   │       ├── niri.nix
+│   │   │       ├── noctalia.json
+│   │   │       └── noctalia.nix
+│   │   ├── gaming.nix
+│   │   ├── kde-connect.nix
+│   │   ├── misc.nix
+│   │   ├── syncthing.nix
+│   │   └── virt.nix
+│   ├── home
+│   │   ├── chozix.nix
+│   │   ├── nvim
+│   │   │   └── nvim lua files...
+│   │   ├── options.nix
+│   │   └── sauce.nix
+│   ├── hosts
+│   │   ├── nixpc
+│   │   │   ├── configuration.nix
+│   │   │   ├── default.nix
+│   │   │   ├── hardware.nix
+│   │   │   └── packages.nix
+│   │   └── saucepc
+│   │       ├── configuration.nix
+│   │       ├── default.nix
+│   │       ├── hardware-configuration.nix
+│   │       └── packages.nix
+│   └── parts.nix
+└── README.md
 ```
 
 ## Hosts
@@ -42,6 +57,7 @@ My personal NixOS configuration, managed with Flake parts across multiple machin
 | Hostname | Description |
 |----------|-------------|
 | `nixpc`  | Desktop  |
+| `sauce`  | Friend's Desktop  |
 
 ## Applying Configuration
 
