@@ -8,6 +8,7 @@
         self.nixosModules.nixpcHardware
         self.nixosModules.nixpcPackages
 
+        self.nixosModules.connect
         self.nixosModules.desktop
         self.nixosModules.gaming
         self.nixosModules.misc
