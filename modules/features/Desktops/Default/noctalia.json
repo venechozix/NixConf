@@ -4,7 +4,10 @@
   "bar": {
     "barType": "simple",
     "position": "left",
-    "monitors": [],
+    "monitors": [
+      "DP-1",
+      "HDMI-A-1"
+    ],
     "density": "default",
     "showOutline": false,
     "showCapsule": true,
@@ -63,7 +66,7 @@
           "showLoadAverage": false,
           "showMemoryAsPercent": false,
           "showMemoryUsage": true,
-          "showNetworkStats": false,
+          "showNetworkStats": true,
           "showSwapUsage": false,
           "textColor": "none",
           "useMonospaceFont": true,
@@ -209,7 +212,13 @@
     "rightClickAction": "controlCenter",
     "rightClickFollowMouse": true,
     "rightClickCommand": "",
-    "screenOverrides": []
+    "screenOverrides": [
+      {
+        "enabled": true,
+        "name": "DP-1",
+        "position": "right"
+      }
+    ]
   },
   "general": {
     "avatarImage": "/home/chozix/Pictures/335e9bad4fcf897520ea691216e970a7.jpg",
