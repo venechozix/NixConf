@@ -12,6 +12,7 @@
         self.nixosModules.sauceDesktop
         self.nixosModules.gaming
 
+        self.nixosModules.misc
       ];
 
       xdg.portal = {
