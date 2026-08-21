@@ -69,7 +69,7 @@
         gsettings-desktop-schemas
         glib
         glib-networking
-
+        linux-wallpaperengine
         gammastep
       ];
 
