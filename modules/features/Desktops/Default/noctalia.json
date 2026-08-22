@@ -4,10 +4,7 @@
   "bar": {
     "barType": "simple",
     "position": "left",
-    "monitors": [
-      "DP-1",
-      "HDMI-A-1"
-    ],
+    "monitors": [],
     "density": "default",
     "showOutline": false,
     "showCapsule": true,
@@ -66,7 +63,7 @@
           "showLoadAverage": false,
           "showMemoryAsPercent": false,
           "showMemoryUsage": true,
-          "showNetworkStats": true,
+          "showNetworkStats": false,
           "showSwapUsage": false,
           "textColor": "none",
           "useMonospaceFont": true,
@@ -212,13 +209,7 @@
     "rightClickAction": "controlCenter",
     "rightClickFollowMouse": true,
     "rightClickCommand": "",
-    "screenOverrides": [
-      {
-        "enabled": true,
-        "name": "DP-1",
-        "position": "right"
-      }
-    ]
+    "screenOverrides": []
   },
   "general": {
     "avatarImage": "/home/chozix/Pictures/335e9bad4fcf897520ea691216e970a7.jpg",
@@ -728,25 +719,52 @@
     "customCommands": "[]"
   },
   "desktopWidgets": {
-    "enabled": false,
+    "enabled": true,
     "overviewEnabled": true,
-    "gridSnap": false,
+    "gridSnap": true,
     "gridSnapScale": false,
     "monitorWidgets": [
       {
         "name": "HDMI-A-1",
         "widgets": [
           {
+            "colorName": "primary",
+            "height": 72,
+            "hideWhenIdle": false,
+            "id": "AudioVisualizer",
+            "roundedCorners": true,
+            "scale": 2.1252756619091713,
+            "showBackground": false,
+            "visualizerType": "linear",
+            "width": 320,
+            "x": 100,
+            "y": 920
+          },
+          {
             "hideMode": "visible",
             "id": "MediaPlayer",
             "roundedCorners": true,
+            "scale": 0.9481455027129865,
             "showAlbumArt": true,
-            "showBackground": true,
+            "showBackground": false,
             "showButtons": true,
-            "showVisualizer": true,
+            "showVisualizer": false,
             "visualizerType": "linear",
-            "x": 100,
-            "y": 200
+            "x": 240,
+            "y": 820
+          },
+          {
+            "clockColor": "none",
+            "clockStyle": "minimal",
+            "customFont": "Iosevka Extrabold Extended",
+            "format": "HH:mm\\n ddd d MMMM yyyy",
+            "id": "Clock",
+            "roundedCorners": true,
+            "scale": 4.014186929853893,
+            "showBackground": false,
+            "useCustomFont": true,
+            "x": 120,
+            "y": 80
           }
         ]
       }
