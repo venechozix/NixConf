@@ -24,6 +24,7 @@
 
           spawn-at-startup = [
             (lib.getExe self'.packages.defNoctalia)
+            "linux-wallpaper-engine"
           ];
 
           prefer-no-csd = _: { };
