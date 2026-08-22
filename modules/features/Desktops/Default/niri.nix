@@ -66,6 +66,17 @@
 
           };
 
+          layer-rule = [
+            {
+              match = _: {
+                props = {
+                  namespace = "^linux-wallpaperengine$";
+                };
+              };
+              place-within-backdrop = true;
+            }
+          ];
+
           layout = {
             gaps = 10;
             border = {
@@ -86,6 +97,8 @@
             default-column-width = {
               proportion = 0.5;
             };
+
+            background-color = "transparent";
 
           };
 
