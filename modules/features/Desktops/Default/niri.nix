@@ -89,6 +89,15 @@
 
           };
 
+          layer-rule = {
+            match = _: {
+              props = {
+                namespace = "^linux-wallpaperengine$";
+              };
+            };
+            place-within-backdrop = true;
+          };
+
           binds = {
             # Hotkey overlay
             "Mod+Shift+Slash".show-hotkey-overlay = { };
