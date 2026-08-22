@@ -92,7 +92,7 @@
           layer-rule = {
             match = _: {
               props = {
-                namespace = "^linux-wallpaperengine$";
+                namespace = "linux-wallpaperengine";
               };
             };
             place-within-backdrop = true;

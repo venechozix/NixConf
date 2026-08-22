@@ -71,6 +71,7 @@
         glib-networking
         linux-wallpaperengine
         gammastep
+        inputs.linux-wallpaper-engine.packages.${pkgs.stdenv.hostPlatform.system}.default
       ];
 
     };
