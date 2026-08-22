@@ -1,8 +1,8 @@
-{ self, ... }:
+{ self, inputs, ... }:
 {
 
   flake.nixosModules.desktop =
-    { pkgs, ... }:
+    { pkgs, inputs, ... }:
     {
       imports = [
         self.nixosModules.niri
