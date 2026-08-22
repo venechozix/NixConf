@@ -141,52 +141,8 @@
           "textColor": "none"
         },
         {
-          "defaultSettings": {
-            "applyWallpaperColorsOnApply": false,
-            "autoApplyOnStartup": true,
-            "badgeEnabled": {
-              "approved": true,
-              "compatibility": true,
-              "dynamic": true,
-              "music": true,
-              "reactive": true,
-              "resolution": true,
-              "type": true
-            },
-            "badgeOrder": [
-              "type",
-              "dynamic",
-              "music",
-              "reactive",
-              "approved",
-              "resolution",
-              "compatibility"
-            ],
-            "defaultAudioReactiveEffects": true,
-            "defaultClamp": "clamp",
-            "defaultDisableMouse": false,
-            "defaultDisableParallax": false,
-            "defaultFps": 30,
-            "defaultFullscreenPauseOnlyActive": false,
-            "defaultMuted": true,
-            "defaultNoAutomute": false,
-            "defaultNoFullscreenPause": false,
-            "defaultScaling": "fill",
-            "defaultVolume": 100,
-            "enableExtraPropertiesEditor": true,
-            "iconColor": "none",
-            "lastKnownGoodScreens": {},
-            "panelLastSelectedPath": "",
-            "panelPageSize": 24,
-            "runtimeRecoveryPending": false,
-            "screens": {},
-            "showSidebarDescription": false,
-            "wallpaperColorScreenshots": {},
-            "wallpaperProperties": {},
-            "wallpaperScanCacheMinutes": 10,
-            "wallpapersFolder": "~/.local/share/Steam/steamapps/workshop/content/431960"
-          },
-          "id": "plugin:linux-wallpaperengine-controller"
+          "defaultSettings": {},
+          "id": "plugin:kde-connect"
         },
         {
           "colorizeDistroLogo": false,
