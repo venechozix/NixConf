@@ -44,6 +44,7 @@
         vscodium
 
         #utils
+        sshfs
         woeusb
         file
         libGL
