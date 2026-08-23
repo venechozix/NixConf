@@ -1,7 +1,7 @@
 { self, inputs, ... }:
 {
 
-  flake.homeModules.chozix =
+  flake.homeModules.admin =
     {
       config,
       lib,
@@ -13,20 +13,7 @@
     {
       home.username = "chozix";
       home.homeDirectory = "/home/chozix";
-      home.stateVersion = "25.11";
-
-      programs.alacritty = {
-        enable = true;
-        settings = {
-          window = {
-            decorations = "None";
-            padding = {
-              x = 5;
-              y = 5;
-            };
-          };
-        };
-      };
+      home.stateVersion = "26.05";
 
       home.file.".config/nvim".source = ./nvim;
 
@@ -129,16 +116,6 @@
       };
 
       # - END OF GIT -
-
-      home.pointerCursor = {
-        enable = true;
-        name = "catppuccin-mocha-dark-cursors";
-        package = pkgs.catppuccin-cursors.mochaDark;
-        x11.enable = true;
-        gtk.enable = true;
-        sway.enable = true;
-        size = 24;
-      };
 
     };
 
