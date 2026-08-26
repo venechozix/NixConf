@@ -59,6 +59,7 @@
         unar
         playerctl
         gamemode
+        brave
       ];
     };
 
