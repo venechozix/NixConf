@@ -7,6 +7,7 @@
       imports = [
         self.nixosModules.niri
         self.nixosModules.fonts
+        self.nixosModules.xdg-mime
         self.nixosModules.gtk
       ];
 
