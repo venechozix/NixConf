@@ -41,6 +41,7 @@
         vscodium
 
         #utils
+        smartmontools
         e2fsprogs
         sshfs
         woeusb
