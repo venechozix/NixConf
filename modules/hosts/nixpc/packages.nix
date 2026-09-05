@@ -19,9 +19,6 @@
       };
 
       nixpkgs.overlays = [ inputs.helium-flake.overlays.default ];
-      nixpkgs.config.permittedInsecurePackages = [
-        "ventoy-gtk3-1.1.12"
-      ];
 
       environment.systemPackages = with pkgs; [
 
@@ -82,7 +79,6 @@
         vlc
         openrgb-with-all-plugins
         moonlight-qt
-        ventoy-full-gtk
         parsec-bin
 
         inputs.zen-browser.packages."${stdenv.hostPlatform.system}".twilight
