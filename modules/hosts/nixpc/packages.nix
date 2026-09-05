@@ -41,6 +41,7 @@
         vscodium
 
         #utils
+        e2fsprogs
         sshfs
         woeusb
         file
