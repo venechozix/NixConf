@@ -50,7 +50,7 @@
       };
 
       fileSystems."/mnt/hdd1" = {
-        device = "/dev/disk/by-uuid/77808b26-1409-4691-aee6-9f506fe02e9c"; # replace with your UUID
+        device = "/dev/disk/by-uuid/3393dee6-f853-489e-ba56-cbc57b402949"; # replace with your UUID
         fsType = "ext4"; # or whatever lsblk shows
         options = [
           "defaults"
@@ -59,7 +59,7 @@
       };
 
       fileSystems."/home/chozix/drives/hdd1" = {
-        device = "/dev/disk/by-uuid/77808b26-1409-4691-aee6-9f506fe02e9c"; # replace with your UUID
+        device = "/dev/disk/by-uuid/3393dee6-f853-489e-ba56-cbc57b402949"; # replace with your UUID
         fsType = "ext4"; # or whatever lsblk shows
         options = [
           "defaults"
