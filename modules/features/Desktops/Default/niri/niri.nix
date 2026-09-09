@@ -39,7 +39,7 @@
             off = _: { };
           };
 
-          animations = import ./animations.nix;
+          animations = import ./_animations.nix;
 
           outputs = {
             "DP-1" = {
