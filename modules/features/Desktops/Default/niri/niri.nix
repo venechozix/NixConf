@@ -77,6 +77,8 @@
             }
           ];
 
+          animations = import ./animations.nix
+      
           layout = {
             gaps = 10;
             border = {
