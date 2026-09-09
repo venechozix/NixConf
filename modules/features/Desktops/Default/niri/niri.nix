@@ -39,6 +39,8 @@
             off = _: { };
           };
 
+          animations = import ./animations.nix;
+
           outputs = {
             "DP-1" = {
               mode = "1280x1024@75.025";
@@ -76,8 +78,6 @@
               place-within-backdrop = true;
             }
           ];
-
-          animations = import ./animations.nix;
 
           layout = {
             gaps = 10;
