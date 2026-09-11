@@ -31,5 +31,22 @@
       };
       open-focused = false;
     }
+    {
+      match = _: {
+        props = {
+          app-id = "Alacritty";
+        };
+      };
+      open-floating = true;
+    }
+    {
+      match = _: {
+        props = {
+          app-id = "org.gnome.Nautilus";
+        };
+      };
+      open-floating = true;
+    }
+
   ];
 }
