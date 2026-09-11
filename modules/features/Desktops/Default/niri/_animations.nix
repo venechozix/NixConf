@@ -10,14 +10,36 @@
   };
 
   window-open = {
-    spring = _: {
-      props = {
-        damping-ratio = 0.75;
-        stiffness = 1000;
-        epsilon = 0.0003;
-      };
-    };
-    # curve = "ease-out-expo";
+    duration-ms = 300;
+    curve = "ease-out-quad";
+
+    custom-shader = "
+
+    vec4 slide_from_bottom(vec3 coords_geo, vec3 size_geo){
+
+      float progress = niri_clamped_progress;
+
+      vec2 coords = coords_geo.xy;
+
+      // Combined logic ( for slide effect from bottom to top )
+      coords.y -= (1.0 - progress);
+
+      if ( coords.y > 1.0 || coords.y < 0.0 ) {
+        return vec4(0.0);
+      }
+
+      vec3 coords_tex = niri_geo_to_tex * vec3(coords, 1.0);
+      vec4 color = texture2D(niri_tex, coords_tex.st);
+
+      return color;
+    }
+
+    vec4 open_color(vec3 coords_geo, vec3 size_geo) {
+      return slide_from_bottom(coords_geo, size_geo);
+    }
+
+  ";
+
   };
 
   window-close = {
