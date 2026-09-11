@@ -1,17 +1,21 @@
 {
   workspace-switch = {
-    spring = {
-      damping-ratio = 0.75;
-      stiffness = 1600;
-      epsilon = 0.0001;
+    spring = _: {
+      props = {
+        damping-ratio = 0.75;
+        stiffness = 1600;
+        epsilon = 0.0001;
+      };
     };
   };
 
   window-open = {
-    spring = {
-      damping-ratio = 0.5;
-      stiffness = 1000;
-      epsilon = 0.0003;
+    spring = _: {
+      props = {
+        damping-ratio = 0.5;
+        stiffness = 1000;
+        epsilon = 0.0003;
+      };
     };
     # curve = "ease-out-expo";
   };
@@ -65,7 +69,6 @@
           float p = niri_clamped_progress;
           float inv = 1.0 - p;
 
-          // Horizontal collapses slightly after vertical for a CRT feel.
           float py = remap(inv, 0.30, 1.00);
           float px = remap(inv, 0.00, 0.80);
 
@@ -103,42 +106,52 @@
   };
 
   horizontal-view-movement = {
-    spring = {
-      damping-ratio = 0.75;
-      stiffness = 800;
-      epsilon = 0.0003;
+    spring = _: {
+      props = {
+        damping-ratio = 0.75;
+        stiffness = 800;
+        epsilon = 0.0003;
+      };
     };
   };
 
   window-movement = {
-    spring = {
-      damping-ratio = 0.6;
-      stiffness = 760;
-      epsilon = 0.0003;
+    spring = _: {
+      props = {
+        damping-ratio = 0.6;
+        stiffness = 760;
+        epsilon = 0.0003;
+      };
     };
   };
 
   window-resize = {
-    spring = {
-      damping-ratio = 0.45;
-      stiffness = 750;
-      epsilon = 0.0001;
+    spring = _: {
+      props = {
+        damping-ratio = 0.45;
+        stiffness = 750;
+        epsilon = 0.0001;
+      };
     };
   };
 
   overview-open-close = {
-    spring = {
-      damping-ratio = 0.40;
-      stiffness = 900;
-      epsilon = 0.001;
+    spring = _: {
+      props = {
+        damping-ratio = 0.40;
+        stiffness = 900;
+        epsilon = 0.001;
+      };
     };
   };
 
   recent-windows-close = {
-    spring = {
-      damping-ratio = 0.40;
-      stiffness = 900;
-      epsilon = 0.001;
+    spring = _: {
+      props = {
+        damping-ratio = 0.40;
+        stiffness = 900;
+        epsilon = 0.001;
+      };
     };
   };
 
