@@ -19,10 +19,13 @@
 
       float progress = niri_clamped_progress;
 
+      // Bounce suave
+      float bounce = sin(progress * 3.14159265) * 0.08;
+      float offset = (1.0 - progress) - bounce;
+
       vec2 coords = coords_geo.xy;
 
-      // Combined logic ( for slide effect from bottom to top )
-      coords.y -= (1.0 - progress);
+      coords.y -= offset;
 
       if ( coords.y > 1.0 || coords.y < 0.0 ) {
         return vec4(0.0);
