@@ -10,7 +10,7 @@
   };
 
   window-open = {
-    duration-ms = 300;
+    duration-ms = 150;
     curve = "ease-out-quad";
 
     custom-shader = "
