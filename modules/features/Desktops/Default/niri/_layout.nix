@@ -18,7 +18,7 @@
   ];
 
   default-column-width = {
-    proportion = 1;
+    proportion = 1.0;
   };
 
   background-color = "transparent";
