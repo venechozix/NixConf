@@ -12,7 +12,7 @@
   window-open = {
     spring = _: {
       props = {
-        damping-ratio = 0.5;
+        damping-ratio = 0.85;
         stiffness = 1000;
         epsilon = 0.0003;
       };
@@ -128,7 +128,7 @@
   window-resize = {
     spring = _: {
       props = {
-        damping-ratio = 0.45;
+        damping-ratio = 0.90;
         stiffness = 750;
         epsilon = 0.0001;
       };
@@ -138,7 +138,7 @@
   overview-open-close = {
     spring = _: {
       props = {
-        damping-ratio = 0.40;
+        damping-ratio = 0.90;
         stiffness = 900;
         epsilon = 0.001;
       };
@@ -148,7 +148,7 @@
   recent-windows-close = {
     spring = _: {
       props = {
-        damping-ratio = 0.40;
+        damping-ratio = 0.90;
         stiffness = 900;
         epsilon = 0.001;
       };
