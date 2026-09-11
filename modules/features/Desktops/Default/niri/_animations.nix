@@ -10,44 +10,32 @@
   };
 
   window-open = {
-    duration-ms = 300;
-    curve = "ease-out-quad";
+    spring = _: {
+      props = {
+        damping-ratio = 0.75;
+        stiffness = 585;
+        epsilon = 0.0003;
+      };
+    };
 
     custom-shader = "
+        vec4 open_color(vec3 coords_geo, vec3 size_geo) {
+            float progress = niri_progress;
+            vec2 coords = coords_geo.xy;
 
-    vec4 slide_from_bottom(vec3 coords_geo, vec3 size_geo){
+            // Desde abajo hacia arriba.
+            // niri_progress puede superar 1.0 con el spring,
+            // produciendo el rebote al llegar.
+            coords.y -= (1.0 - progress);
 
-      float progress = niri_clamped_progress;
+            if (coords.y > 1.0 || coords.y < 0.0) {
+                return vec4(0.0);
+            }
 
-      // Spring / bounce amortiguado
-      float damping = 7.0;
-      float frequency = 5.0;
-
-      float spring =
-        1.0 - exp(-damping * progress)
-        * cos(frequency * progress);
-
-      vec2 coords = coords_geo.xy;
-
-      // Desplazamiento desde abajo con overshoot
-      float offset = 1.0 - spring;
-      coords.y -= offset;
-
-      if ( coords.y > 1.0 || coords.y < 0.0 ) {
-        return vec4(0.0);
-      }
-
-      vec3 coords_tex = niri_geo_to_tex * vec3(coords, 1.0);
-      vec4 color = texture2D(niri_tex, coords_tex.st);
-
-      return color;
-    }
-
-    vec4 open_color(vec3 coords_geo, vec3 size_geo) {
-      return slide_from_bottom(coords_geo, size_geo);
-    }
-
-  ";
+            vec3 coords_tex = niri_geo_to_tex * vec3(coords, 1.0);
+            return texture2D(niri_tex, coords_tex.st);
+        }
+    ";
 
   };
 
