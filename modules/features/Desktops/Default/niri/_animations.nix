@@ -20,7 +20,7 @@
       float progress = niri_clamped_progress;
 
       // Bounce suave
-      float bounce = sin(progress * 3.14159265) * 0.08;
+      float bounce = sin(progress * 3.14159265) * 0.15;
       float offset = (1.0 - progress) - bounce;
 
       vec2 coords = coords_geo.xy;
