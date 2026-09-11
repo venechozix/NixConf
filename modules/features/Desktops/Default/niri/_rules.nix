@@ -15,5 +15,21 @@
       geometry-corner-radius = 20;
       clip-to-geometry = true;
     }
+    {
+      match = _: {
+        props = {
+          app-id = "^steam$";
+          title = "^notificationtoasts_\\d+_desktop$";
+        };
+      };
+      default-floating-position = _: {
+        props = {
+          x = 10;
+          y = 10;
+          relative-to = "bottom-right";
+        };
+      };
+      open-focused = false;
+    }
   ];
 }
