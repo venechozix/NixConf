@@ -1,209 +1,151 @@
 {
+  workspace-switch = {
+    spring = {
+      damping-ratio = 0.75;
+      stiffness = 1600;
+      epsilon = 0.0001;
+    };
+  };
+
   window-open = {
-    duration-ms = 500;
-    curve = "linear";
-    custom-shader = ''
-      #define ROOT_THREE 1.73205080757
-
-      float round_value(float value) {
-          return floor(value + 0.5);
-      }
-
-      // This function is used to snap fractional axial coordinates to nearest integer hexagon
-      vec2 round_to_hex(vec2 axial_coords) {
-          // Convert axial coordinates to Cube [ x + y + z = 0 ]
-          float x = axial_coords.x;
-          float z = axial_coords.y;
-          float y = - x - z;
-
-          // Round components to the nearest integers
-          float r_x = round_value(x);
-          float r_y = round_value(y);
-          float r_z = round_value(z);
-
-          // Check and correct rounding errors, so that our property [ x + y + z = 0 ] holds true
-          float diff_x = abs(r_x - x);
-          float diff_y = abs(r_y - y);
-          float diff_z = abs(r_z - z);
-
-          // Correct component with largest error
-          if( diff_x > diff_y && diff_x > diff_z) {
-              r_x = - r_y - r_z;
-          }
-          else if( diff_y > diff_z ) {
-              r_y = - r_x - r_z;
-          }
-          else {
-              r_z = - r_y - r_x;
-          }
-
-          return vec2(r_x, r_z);
-      }
-
-      vec2 get_axial_coords(vec2 coords, float size) {
-          float q_axial = coords.x * (2.0 / 3.0);
-          q_axial /= size;
-
-          float r_axial = (-coords.x / 3.0) + (ROOT_THREE / 3.0) * coords.y;
-          r_axial /= size;
-
-          return vec2(q_axial, r_axial);
-      }
-
-      vec2 get_normal_coords_of_hex_center(vec2 axial_coords, float size) {
-          float q_axial = axial_coords.x;
-          float r_axial = axial_coords.y;
-
-          float x = q_axial * (3.0 / 2.0);
-          x *= size;
-
-          float y = ROOT_THREE * (r_axial + (q_axial * 0.5));
-          y *= size;
-
-          return vec2(x,y);
-      }
-
-      vec4 honeycomb_open(vec3 coords_geo, vec3 size_geo){
-          float progress = niri_clamped_progress;
-
-          float aspect_ratio = size_geo.x / size_geo.y;
-          vec2 coords = coords_geo.xy;
-          vec2 normalized_coords = vec2(coords.x * aspect_ratio, coords.y);
-          vec2 normalized_center = vec2(0.5 * aspect_ratio, 0.5);
-
-          // Size of single hexagon
-          float hex_size = 0.02 + (niri_random_seed / 20.0);
-          float unit_size = max(hex_size, 0.01);
-
-          // Convert normalized coordinates to axial
-          vec2 axial_coords = get_axial_coords(normalized_coords, unit_size);
-
-          // Find nearest hexagon cell
-          vec2 nearest_hex = round_to_hex(axial_coords);
-
-          // Get center of the nearest_hex ( in normal coords )
-          vec2 hex_center = get_normal_coords_of_hex_center(nearest_hex, unit_size);
-
-          // Get distance from center to nearest hexagon center
-          float hex_dist = distance(hex_center, normalized_center);
-
-          float max_reveal_radius = length(normalized_center) * 1.25;
-          float soft_edge_width = 0.15;
-
-          // Get the wave radius
-          float wave_radius = progress * (max_reveal_radius + soft_edge_width);
-
-          float mask = smoothstep((wave_radius - soft_edge_width), wave_radius, hex_dist);
-
-          vec3 coords_tex = niri_geo_to_tex * coords_geo;
-          vec4 color = texture2D(niri_tex, coords_tex.st);
-
-          color *= (1.0 - mask);
-
-          return color;
-      }
-
-      vec4 open_color(vec3 coords_geo, vec3 size_geo) {
-          return honeycomb_open(coords_geo, size_geo);
-      }
-    '';
+    spring = {
+      damping-ratio = 0.5;
+      stiffness = 1000;
+      epsilon = 0.0003;
+    };
+    # curve = "ease-out-expo";
   };
 
   window-close = {
-    duration-ms = 400;
+    duration-ms = 200;
     curve = "linear";
     custom-shader = ''
-      #define ROOT_THREE 1.73205080757
+      // ── Easing ────────────────────────────────────────────────────────
+      float easeInExpo(float t)   { return t == 0.0 ? 0.0 : pow(2.0, 10.0 * (t - 1.0)); }
+      float easeOutQuad(float t)  { return 1.0 - (1.0 - t) * (1.0 - t); }
+      float easeInQuad(float t)   { return t * t; }
+      float easeOutCubic(float t) { float f = t - 1.0; return f * f * f + 1.0; }
+      float easeInQuart(float t)  { return t * t * t * t; }
 
-      float round_value(float value) {
-          return floor(value + 0.5);
+      float saturate(float x) {
+          return clamp(x, 0.0, 1.0);
       }
 
-      vec2 round_to_hex(vec2 axial_coords) {
-          float x = axial_coords.x;
-          float z = axial_coords.y;
-          float y = - x - z;
-
-          float r_x = round_value(x);
-          float r_y = round_value(y);
-          float r_z = round_value(z);
-
-          float diff_x = abs(r_x - x);
-          float diff_y = abs(r_y - y);
-          float diff_z = abs(r_z - z);
-
-          if( diff_x > diff_y && diff_x > diff_z) {
-              r_x = - r_y - r_z;
-          }
-          else if( diff_y > diff_z ) {
-              r_y = - r_x - r_z;
-          }
-          else {
-              r_z = - r_y - r_x;
-          }
-
-          return vec2(r_x, r_z);
+      float remap(float t, float a, float b) {
+          return saturate((t - a) / (b - a));
       }
 
-      vec2 get_axial_coords(vec2 coords, float size) {
-          float q_axial = coords.x * (2.0 / 3.0);
-          q_axial /= size;
-
-          float r_axial = (-coords.x / 3.0) + (ROOT_THREE / 3.0) * coords.y;
-          r_axial /= size;
-
-          return vec2(q_axial, r_axial);
+      vec2 scaleUV(vec2 uv, vec2 scale) {
+          return (uv - 0.5) / scale + 0.5;
       }
 
-      vec2 get_normal_coords_of_hex_center(vec2 axial_coords, float size) {
-          float q_axial = axial_coords.x;
-          float r_axial = axial_coords.y;
-
-          float x = q_axial * (3.0 / 2.0);
-          x *= size;
-
-          float y = ROOT_THREE * (r_axial + (q_axial * 0.5));
-          y *= size;
-
-          return vec2(x,y);
+      float centerGradient(float x) {
+          x *= 2.0;
+          return x < 1.0 ? x : 2.0 - x;
       }
 
-      vec4 honeycomb_close(vec3 coords_geo, vec3 size_geo){
-          float progress = niri_clamped_progress;
-          float reverse_progress = 1.0 - progress;
-
-          float aspect_ratio = size_geo.x / size_geo.y;
-          vec2 coords = coords_geo.xy;
-          vec2 normalized_coords = vec2(coords.x * aspect_ratio, coords.y);
-          vec2 normalized_center = vec2(0.5 * aspect_ratio, 0.5);
-
-          float hex_size = 0.02 + (niri_random_seed / 20.0);
-          float unit_size = max(hex_size, 0.01);
-
-          vec2 axial_coords = get_axial_coords(normalized_coords, unit_size);
-          vec2 nearest_hex = round_to_hex(axial_coords);
-          vec2 hex_center = get_normal_coords_of_hex_center(nearest_hex, unit_size);
-
-          float hex_dist = distance(hex_center, normalized_center);
-
-          float max_reveal_radius = length(normalized_center) * 1.25;
-          float soft_edge_width = 0.15;
-
-          float wave_radius = reverse_progress * (max_reveal_radius + soft_edge_width);
-
-          float mask = smoothstep((wave_radius - soft_edge_width), wave_radius, hex_dist);
-
-          vec3 coords_tex = niri_geo_to_tex * coords_geo;
-          vec4 color = texture2D(niri_tex, coords_tex.st);
-
-          color *= (1.0 - mask);
-
-          return color;
+      vec2 barrelDistort(vec2 uv, float strength) {
+          vec2 cc = uv - 0.5;
+          float dist = dot(cc, cc);
+          return uv + cc * dist * strength;
       }
 
       vec4 close_color(vec3 coords_geo, vec3 size_geo) {
-          return honeycomb_close(coords_geo, size_geo);
+
+          if (coords_geo.x < 0.0 || coords_geo.x > 1.0 ||
+              coords_geo.y < 0.0 || coords_geo.y > 1.0)
+              return vec4(0.0);
+
+          vec2 uv = (niri_geo_to_tex * coords_geo).xy;
+
+          if (uv.x < 0.0 || uv.x > 1.0 ||
+              uv.y < 0.0 || uv.y > 1.0)
+              return vec4(0.0);
+
+          float p = niri_clamped_progress;
+          float inv = 1.0 - p;
+
+          // Horizontal collapses slightly after vertical for a CRT feel.
+          float py = remap(inv, 0.30, 1.00);
+          float px = remap(inv, 0.00, 0.80);
+
+          float scaleX = mix(0.06, 1.0, easeOutCubic(px));
+          float scaleY = mix(0.00, 1.0, easeInQuad(py));
+
+          float barrelStr = (1.0 - easeOutQuad(px)) * 0.20;
+          vec2 distortedUV = barrelDistort(uv, barrelStr);
+
+          vec2 sampleUV = scaleUV(distortedUV, vec2(scaleX, scaleY));
+
+          if (sampleUV.x < 0.0 || sampleUV.x > 1.0 ||
+              sampleUV.y < 0.0 || sampleUV.y > 1.0)
+              return vec4(0.0);
+
+          vec4 color = texture2D(niri_tex, sampleUV);
+
+          float edgeSoft = mix(0.14, 0.04, easeInQuad(p));
+
+          float tb = centerGradient(sampleUV.y);
+          float lr = centerGradient(sampleUV.x);
+
+          float mask =
+              smoothstep(0.0, edgeSoft, tb) *
+              smoothstep(0.0, edgeSoft, lr);
+
+          color.a *= mask;
+          color *= easeOutQuad(inv);
+
+          color *= 1.0 - easeInQuart(remap(p, 0.90, 1.00));
+
+          return color;
       }
     '';
   };
+
+  horizontal-view-movement = {
+    spring = {
+      damping-ratio = 0.75;
+      stiffness = 800;
+      epsilon = 0.0003;
+    };
+  };
+
+  window-movement = {
+    spring = {
+      damping-ratio = 0.6;
+      stiffness = 760;
+      epsilon = 0.0003;
+    };
+  };
+
+  window-resize = {
+    spring = {
+      damping-ratio = 0.45;
+      stiffness = 750;
+      epsilon = 0.0001;
+    };
+  };
+
+  overview-open-close = {
+    spring = {
+      damping-ratio = 0.40;
+      stiffness = 900;
+      epsilon = 0.001;
+    };
+  };
+
+  recent-windows-close = {
+    spring = {
+      damping-ratio = 0.40;
+      stiffness = 900;
+      epsilon = 0.001;
+    };
+  };
+
+  screenshot-ui-open = {
+    duration-ms = 200;
+    curve = "ease-out-quad";
+  };
+
+  slowdown = 1.3;
 }
