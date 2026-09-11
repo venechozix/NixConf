@@ -82,6 +82,7 @@
         openrgb-with-all-plugins
         moonlight-qt
         parsec-bin
+        pear-desktop
 
         inputs.zen-browser.packages."${stdenv.hostPlatform.system}".twilight
         qbittorrent
