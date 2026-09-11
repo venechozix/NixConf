@@ -10,7 +10,7 @@
   };
 
   window-open = {
-    duration-ms = 150;
+    duration-ms = 300;
     curve = "ease-out-quad";
 
     custom-shader = "
@@ -19,12 +19,18 @@
 
       float progress = niri_clamped_progress;
 
-      // Bounce suave
-      float bounce = sin(progress * 3.14159265) * 0.15;
-      float offset = (1.0 - progress) - bounce;
+      // Spring / bounce amortiguado
+      float damping = 7.0;
+      float frequency = 5.0;
+
+      float spring =
+        1.0 - exp(-damping * progress)
+        * cos(frequency * progress);
 
       vec2 coords = coords_geo.xy;
 
+      // Desplazamiento desde abajo con overshoot
+      float offset = 1.0 - spring;
       coords.y -= offset;
 
       if ( coords.y > 1.0 || coords.y < 0.0 ) {
