@@ -84,6 +84,7 @@
         parsec-bin
         pear-desktop
 
+        discord
         vencord
 
         inputs.zen-browser.packages."${stdenv.hostPlatform.system}".twilight
