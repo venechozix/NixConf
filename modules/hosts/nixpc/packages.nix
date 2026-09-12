@@ -85,7 +85,7 @@
         pear-desktop
 
         (discord.override {
-          withVencord = true;
+          withVencord = true; # o true si usás Vencord
         })
 
         inputs.zen-browser.packages."${stdenv.hostPlatform.system}".twilight
