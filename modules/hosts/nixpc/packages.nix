@@ -84,7 +84,9 @@
         parsec-bin
         pear-desktop
 
-        discord
+        (discord.override {
+          withVencord = true;
+        })
 
         inputs.zen-browser.packages."${stdenv.hostPlatform.system}".twilight
         qbittorrent
