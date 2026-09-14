@@ -15,6 +15,10 @@
     spawn-sh = "${lib.getExe self'.packages.defNoctalia} ipc call launcher toggle";
   };
 
+  "Ctrl+M" = {
+    spawn-sh = "${lib.getExe pkgs.equibop} --toggle-mic";
+  };
+
   # Overview / window management
   "Mod+O".toggle-overview = { };
   "Mod+X".close-window = { };
