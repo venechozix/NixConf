@@ -20,6 +20,10 @@
 
       nixpkgs.overlays = [ inputs.helium-flake.overlays.default ];
 
+      nixpkgs.config.permittedInsecurePackages = [
+        "electron-41.10.6"
+      ];
+
       environment.systemPackages = with pkgs; [
 
         #dev
