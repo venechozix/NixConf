@@ -14,11 +14,6 @@
 
     wrapper-modules.url = "github:BirdeeHub/nix-wrapper-modules";
 
-    aagl = {
-      url = "github:ezKEa/aagl-gtk-on-nix";
-      inputs.nixpkgs.follows = "nixpkgs";
-    };
-
     nix-gaming.url = "github:fufexan/nix-gaming";
 
     helium-flake.url = "github:oxcl/nix-flake-helium-browser";
