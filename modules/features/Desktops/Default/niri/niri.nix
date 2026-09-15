@@ -24,6 +24,7 @@
 
           spawn-at-startup = [
             (lib.getExe self'.packages.defNoctalia)
+            (lib.getExe pkgs.equibop)
           ];
 
           prefer-no-csd = _: { };
