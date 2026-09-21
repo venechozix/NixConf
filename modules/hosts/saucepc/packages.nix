@@ -60,6 +60,7 @@
         playerctl
         gamemode
         brave
+        inputs.limusic.packages."${stdenv.hostPlatform.system}".default
       ];
     };
 

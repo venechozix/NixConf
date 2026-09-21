@@ -90,6 +90,8 @@
 
         equibop
 
+        inputs.limusic.packages."${stdenv.hostPlatform.system}".default
+
         inputs.zen-browser.packages."${stdenv.hostPlatform.system}".twilight
         qbittorrent
         koodo-reader

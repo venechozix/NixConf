@@ -12,6 +12,11 @@
       inputs.nixpkgs.follows = "nixpkgs";
     };
 
+    limusic = {
+      url = "github:davidvanderklay/limusic-nix";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
+
     wrapper-modules.url = "github:BirdeeHub/nix-wrapper-modules";
 
     nix-gaming.url = "github:fufexan/nix-gaming";
