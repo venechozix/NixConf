@@ -10,6 +10,10 @@
     }:
     {
 
+      nixpkgs.config.permittedInsecurePackages = [
+        "electron-41.10.6"
+      ];
+
       environment.systemPackages = with pkgs; [
         #dev
         libgccjit
