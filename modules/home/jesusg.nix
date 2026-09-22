@@ -1,7 +1,7 @@
 { self, inputs, ... }:
 {
 
-  flake.homeModules.admin =
+  flake.homeModules.jesusg =
     {
       config,
       lib,
