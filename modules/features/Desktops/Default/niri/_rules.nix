@@ -3,7 +3,7 @@
     {
       match = _: {
         props = {
-          namespace = "^linux-wallpaperengine$";
+          namespace = "^noctalia-wallpaper$";
         };
       };
       place-within-backdrop = true;
