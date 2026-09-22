@@ -61,6 +61,7 @@
       };
 
       environment.systemPackages = with pkgs; [
+        noctalia
         polkit_gnome
         ncdu
         htop
