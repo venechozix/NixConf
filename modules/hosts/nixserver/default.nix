@@ -11,6 +11,7 @@
           useGlobalPkgs = true;
           useUserPackages = true;
           users.chozix = self.homeModules.admin;
+          users.jesusg = self.homeModules.jesusg;
           backupFileExtension = "backup";
           extraSpecialArgs = { inherit inputs; };
         };

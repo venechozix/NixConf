@@ -69,6 +69,21 @@
         ];
       };
 
+      users.users.jesusg = {
+        isNormalUser = true;
+        description = "Pa";
+        extraGroups = [
+          "networkmanager"
+          "wheel"
+          "syncthing"
+          "docker"
+          "input"
+          "tty"
+          "libvirtd"
+          "kvm"
+        ];
+      };
+
       # Allow unfree packages
       nixpkgs.config.allowUnfree = true;
 
@@ -105,5 +120,4 @@
       system.stateVersion = "26.05"; # Did you read the comment?
 
     };
-
 }
