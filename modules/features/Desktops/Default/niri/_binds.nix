@@ -12,11 +12,16 @@
     spawn = lib.getExe pkgs.alacritty;
   };
   "Mod+Space" = {
-    spawn-sh = "${lib.getExe self'.packages.defNoctalia} ipc call launcher toggle";
+    spawn-sh = "${lib.getExe pkgs.noctalia} msg panel-toggle launcher";
   };
 
-  "Ctrl+M" = {
-    spawn-sh = "${lib.getExe pkgs.equibop} --toggle-mic";
+  "Ctrl+M" = _: {
+    props = {
+      cooldown-ms = 150;
+    };
+    content = {
+      spawn-sh = "${lib.getExe pkgs.equibop} --toggle-mic";
+    };
   };
 
   # Overview / window management
