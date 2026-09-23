@@ -11,17 +11,7 @@
     {
       match = _: {
         props = {
-          namespace = "^noctalia-(notification|dock|panel|attached-panel|osd)$";
-        };
-      };
-      background-effect = {
-        blur = false;
-      };
-    }
-    {
-      match = _: {
-        props = {
-          namespace = "^noctalia-bar-Main$";
+          namespace = "^noctalia-(notification|dock|panel|attached-panel|osd|bar-Main)$";
         };
       };
       background-effect = {
