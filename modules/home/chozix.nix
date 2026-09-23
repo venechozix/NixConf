@@ -13,7 +13,11 @@
     {
       home.username = "chozix";
       home.homeDirectory = "/home/chozix";
+
       home.stateVersion = "25.11";
+      imports = [
+        self.homeModules.noctalia-settings
+      ];
 
       programs.alacritty = {
         enable = true;

@@ -1,0 +1,208 @@
+config_version = 14
+
+[bar]
+order = [ "Main" ]
+
+    [bar.Main]
+    background_opacity = 0.0
+    capsule = true
+    capsule_thickness = 0.87999998405575752
+    center = [ "workspaces" ]
+    concave_edge_corners = false
+    end = [ "tray", "bluetooth", "wallpaper", "notifications", "control-center" ]
+    margin_ends = 0
+    radius = 80
+    shadow = false
+    start = [ "launcher", "clock", "volume", "media", "group:g1" ]
+    thickness = 30
+
+        [bar.Main.monitor.DP-1]
+        position = "left"
+
+        [[bar.Main.capsule_group]]
+        accordion = false
+        accordion_direction = "end"
+        enabled = true
+        fill = "surface_variant"
+        id = "g1"
+        members = [ "ram", "cpu", "sysmon" ]
+        opacity = 1.0
+        padding = 6.0
+
+[desktop_widgets]
+enabled = false
+schema_version = 2
+widget_order = [ "desktop-widget-0000000000000001", "desktop-widget-0000000000000002" ]
+
+    [desktop_widgets.grid]
+    cell_size = 24
+    major_interval = 4
+    visible = true
+
+    [desktop_widgets.widget.desktop-widget-0000000000000001]
+    box_height = 272.0
+    box_width = 480.0
+    cx = 432.0
+    cy = 396.0
+    output = "HDMI-A-1"
+    placement_height = 1080.0
+    placement_width = 1920.0
+    rotation = 0.0
+    type = "clock"
+
+        [desktop_widgets.widget.desktop-widget-0000000000000001.settings]
+        background = false
+        background_opacity = 0.23999999999999999
+        center_text = true
+        color = "on_surface"
+        format = "{:%H:%M} "
+        timezone = ""
+
+    [desktop_widgets.widget.desktop-widget-0000000000000002]
+    box_height = 288.0
+    box_width = 552.0
+    cx = 396.0
+    cy = 936.0
+    output = "HDMI-A-1"
+    placement_height = 1080.0
+    placement_width = 1920.0
+    rotation = 0.0
+    type = "audio_visualizer"
+
+        [desktop_widgets.widget.desktop-widget-0000000000000002.settings]
+        background = false
+        background_opacity = 0.0
+        bands = 12
+        centered = false
+        mirrored = true
+        show_when_idle = true
+
+[lockscreen_widgets]
+enabled = false
+schema_version = 2
+widget_order = [ "lockscreen-login-box@HDMI-A-1", "lockscreen-login-box@DP-1" ]
+
+    [lockscreen_widgets.grid]
+    cell_size = 16
+    major_interval = 4
+    visible = true
+
+    [lockscreen_widgets.widget."lockscreen-login-box@DP-1"]
+    box_height = 196.0
+    box_width = 810.0
+    cx = 512.0
+    cy = 1098.0
+    output = "DP-1"
+    placement_height = 1280.0
+    placement_width = 1024.0
+    rotation = 0.0
+    type = "login_box"
+
+        [lockscreen_widgets.widget."lockscreen-login-box@DP-1".settings]
+        background_color = "surface_variant"
+        background_opacity = 0.88
+        background_radius = 12.0
+        center_password_text = false
+        input_opacity = 1.0
+        input_radius = 6.0
+        layout = "regular"
+        show_caps_lock = true
+        show_keyboard_layout = true
+        show_login_button = true
+        show_media = true
+        show_session_buttons = true
+        show_unlock_hint = true
+        show_weather = true
+
+    [lockscreen_widgets.widget."lockscreen-login-box@HDMI-A-1"]
+    box_height = 196.0
+    box_width = 810.0
+    cx = 960.0
+    cy = 898.0
+    output = "HDMI-A-1"
+    placement_height = 1080.0
+    placement_width = 1920.0
+    rotation = 0.0
+    type = "login_box"
+
+        [lockscreen_widgets.widget."lockscreen-login-box@HDMI-A-1".settings]
+        background_color = "surface_variant"
+        background_opacity = 0.88
+        background_radius = 12.0
+        center_password_text = false
+        input_opacity = 1.0
+        input_radius = 6.0
+        layout = "regular"
+        show_caps_lock = true
+        show_keyboard_layout = true
+        show_login_button = true
+        show_media = true
+        show_session_buttons = true
+        show_unlock_hint = true
+        show_weather = true
+
+[osd]
+background_opacity = 0.99999997764825821
+
+[shell]
+button_borders = false
+card_borders = false
+corner_radius_scale = 1.4000000208616257
+font_family = "Cascadia Mono NF Light"
+popup_borders = false
+
+[theme]
+builtin = "Gruvbox"
+community_palette = "Murata"
+mode = "dark"
+source = "community"
+wallpaper_scheme = "m3-tonal-spot"
+
+    [theme.templates]
+    enable_builtin_templates = false
+
+[wallpaper.default]
+path = "/home/chozix/Pictures/wallpapers/Horizontal/HQAVF6zakAAGDxb.jpg"
+
+[wallpaper.last]
+path = "/home/chozix/Pictures/wallpapers/Horizontal/HQAVF6zakAAGDxb.jpg"
+
+[wallpaper.monitors.DP-1]
+path = "/home/chozix/Pictures/wallpapers/Horizontal/HQAVF6zakAAGDxb.jpg"
+
+[wallpaper.monitors.HDMI-A-1]
+path = "/home/chozix/Pictures/wallpapers/Horizontal/HQAVF6zakAAGDxb.jpg"
+
+[widget.audio_visualizer]
+interactive = false
+scale = 2.5
+
+[widget.clock]
+format = "{:%H}:{:%M}"
+scale = 0.85000000000000009
+
+[widget.control-center]
+custom_image = "/home/chozix/Pictures/anilist/pfp.png"
+
+[widget.cpu]
+show_value = false
+
+[widget.media]
+max_length = 139
+title_scroll = "always"
+
+[widget.ram]
+show_value = false
+
+[widget.sysmon]
+show_value = false
+stat = "gpu_usage"
+
+[widget.tray]
+drawer = true
+
+[widget.volume]
+show_label = false
+
+[widget.workspaces]
+show_labels = false
