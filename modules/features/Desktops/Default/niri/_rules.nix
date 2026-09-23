@@ -18,6 +18,16 @@
         blur = false;
       };
     }
+    {
+      match = _: {
+        props = {
+          namespace = "^noctalia-bar-Main$";
+        };
+      };
+      background-effect = {
+        blur = false;
+      };
+    }
   ];
 
   window-rules = [
