@@ -23,7 +23,7 @@
         settings = {
 
           spawn-at-startup = [
-            (lib.getExe self'.packages.defNoctalia)
+            (lib.getExe pkgs.noctalia)
             (lib.getExe pkgs.equibop)
           ];
 
