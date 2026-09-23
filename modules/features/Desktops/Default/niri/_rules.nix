@@ -11,7 +11,7 @@
     {
       match = _: {
         props = {
-          namespace = "^noctalia-bar-Main$";
+          namespace = "^noctalia-(notification|dock|panel|attached-panel|osd)$";
         };
       };
       background-effect = {
