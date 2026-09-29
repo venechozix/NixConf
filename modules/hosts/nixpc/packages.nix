@@ -24,6 +24,8 @@
         "electron-41.10.6"
       ];
 
+      services.xserver.excludePackages = [ pkgs.xterm ];
+
       environment.systemPackages = with pkgs; [
 
         #dev
