@@ -60,6 +60,8 @@
         };
       };
 
+      services.gvfs.enable = true;
+
       environment.systemPackages = with pkgs; [
         noctalia
         polkit_gnome
