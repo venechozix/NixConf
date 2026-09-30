@@ -144,6 +144,10 @@
         size = 24;
       };
 
+      home.packages = with pkgs; [
+        super-productivity
+      ];
+
     };
 
 }
