@@ -63,8 +63,9 @@
 
         fastfetch
         spotify
-        vesktop
         keepassxc
+
+        brave
 
         teamspeak6-client
         zip
