@@ -53,6 +53,10 @@
             xcursor-size = 24;
           };
 
+          enviroment = {
+            QT_QPA_PLATFORMTHEME = "qt6ct";
+            QT_QPA_PLATFORM = "wayland";
+          };
         }
         // import ./_rules.nix;
       };
