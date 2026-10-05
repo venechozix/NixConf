@@ -10,6 +10,7 @@
         config.common.default = [ "gnome" ];
 
       };
+      xdg.mime.enable = true;
 
       xdg.mime.defaultApplications = {
         "inode/directory" = "org.kde.dolphin.desktop";
