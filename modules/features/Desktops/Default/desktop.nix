@@ -62,6 +62,13 @@
 
       services.gvfs.enable = true;
 
+      # Configure Qt Theming
+      qt = {
+        enable = true;
+        platformTheme = "qt5ct";
+        style = "adwaita-dark"; # Or "breeze" / "fusion" depending on preference
+      };
+
       environment.systemPackages = with pkgs; [
         noctalia
         polkit_gnome
@@ -74,6 +81,9 @@
         glib
         glib-networking
         gammastep
+        libsForQt5.qt5ct
+        kdePackages.qt6ct
+        kdePackages.breeze
       ];
 
     };
