@@ -45,7 +45,7 @@
         python314
         pyenv
         vscodium
-
+        sane-backends
         #utils
         smartmontools
         e2fsprogs
