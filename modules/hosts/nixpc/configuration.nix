@@ -47,7 +47,7 @@
 
       services.printing = {
         enable = true;
-        drivers = [ pkgs.splix ];
+        drivers = [ pkgs.samsung-unified-linux-driver ];
       };
 
       users.users.chozix = {
