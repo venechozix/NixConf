@@ -53,7 +53,7 @@
             xcursor-size = 24;
           };
 
-          enviroment = {
+          environment = {
             QT_QPA_PLATFORMTHEME = "qt6ct";
             QT_QPA_PLATFORM = "wayland";
           };
