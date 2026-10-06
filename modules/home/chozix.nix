@@ -32,6 +32,12 @@
         };
       };
 
+      home.file.".config/kdeglobals".text = ''
+        [General]
+        TerminalApplication=alacritty
+        TerminalService=alacritty.desktop
+      '';
+
       home.file.".config/nvim".source = ./nvim;
 
       # - START OF NVIM -

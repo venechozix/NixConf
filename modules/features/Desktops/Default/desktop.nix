@@ -75,12 +75,15 @@
         ncdu
         htop
         eog
-        nautilus
         icu77
         gsettings-desktop-schemas
         glib
         glib-networking
         gammastep
+        kdePackages.dolphin
+        kdePackages.kdegraphics-thumbnailers
+        kdePackages.kio-extras
+        kdePackages.kservice
         libsForQt5.qt5ct
         kdePackages.qt6ct
         kdePackages.breeze

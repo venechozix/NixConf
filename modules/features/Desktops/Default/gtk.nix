@@ -28,10 +28,6 @@
         };
       };
 
-      environment.variables = {
-        GTK_THEME = theme-name;
-      };
-
       programs = {
         dconf = {
           enable = lib.mkDefault true;
