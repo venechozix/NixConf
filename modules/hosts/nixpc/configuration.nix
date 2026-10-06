@@ -2,7 +2,12 @@
 {
 
   flake.nixosModules.nixpcConfig =
-    { config, pkgs, ... }:
+    {
+      config,
+      pkgs,
+      inputs,
+      ...
+    }:
     {
       imports = [
         self.nixosModules.nixpcHardware
@@ -14,6 +19,8 @@
         self.nixosModules.misc
         self.nixosModules.virt
         self.nixosModules.syncthing
+
+        inputs.nix-gaming.nixosModules.pipewireLowLatency
       ];
 
       nix.settings = {
@@ -83,6 +90,14 @@
         alsa.enable = true;
         alsa.support32Bit = true;
         pulse.enable = true;
+
+        lowLatency = {
+          # enable this module
+          enable = true;
+          # defaults (no need to be set unless modified)
+          quantum = 64;
+          rate = 48000;
+        };
 
         wireplumber.extraConfig."10-disable-agc" = {
           "monitor.alsa.properties" = {
