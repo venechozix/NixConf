@@ -160,11 +160,11 @@
         ]
       },
       "locked": {
-        "lastModified": 1791027392,
-        "narHash": "sha256-nG6qybX6rcmrBbchER2APHjYOyrC6bMzu6uhZnO99Ds=",
+        "lastModified": 1791585366,
+        "narHash": "sha256-v7ICv70cTHq33WtpPbSbffJ7mqHDQn24XK7d5gfX5ZY=",
         "owner": "davidvanderklay",
         "repo": "limusic-nix",
-        "rev": "5e2cc67c0732c5237c2479b13cc279fbf143c167",
+        "rev": "8ef32464f19993604c02907af0c722efcc5b3948",
         "type": "github"
       },
       "original": {
