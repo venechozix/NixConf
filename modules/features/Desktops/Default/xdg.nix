@@ -40,7 +40,12 @@
         };
       };
 
-      # Hardlink the plasma application menu where Dolphin expects it
+      xdg.configFile."kdeglobals".text = ''
+        [General]
+        TerminalApplication=alacritty
+        TerminalService=alacritty.desktop
+      '';
+
       environment.etc."xdg/menus/applications.menu".source =
         "${pkgs.kdePackages.plasma-workspace}/etc/xdg/menus/plasma-applications.menu";
 
