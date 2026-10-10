@@ -16,7 +16,7 @@
 
       home.stateVersion = "25.11";
       imports = [
-        self.homeModules.cursor
+        self.homeModules.saber-alter-cursor
         self.homeModules.noctalia-settings
       ];
 
