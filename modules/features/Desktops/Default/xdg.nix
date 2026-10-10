@@ -28,8 +28,8 @@
       xdg.mime = {
         enable = true;
         defaultApplications = {
-          "inode/directory" = [ "org.kde.dolphin.desktop" ];
-          "x-scheme-handler/file" = [ "org.kde.dolphin.desktop" ];
+          "inode/directory" = [ "thunar.desktop" ];
+          "x-scheme-handler/file" = [ "thunar.desktop" ];
           # Navegador
           "text/html" = [ "zen-twilight.desktop" ];
           "x-scheme-handler/http" = [ "zen-twilight.desktop" ];
@@ -40,18 +40,11 @@
         };
       };
 
-      xdg.configFile."kdeglobals".text = ''
-        [General]
-        TerminalApplication=alacritty
-        TerminalService=alacritty.desktop
-      '';
-
       environment.etc."xdg/menus/applications.menu".source =
         "${pkgs.kdePackages.plasma-workspace}/etc/xdg/menus/plasma-applications.menu";
 
       environment.systemPackages = with pkgs; [
         xdg-terminal-exec
-        kdePackages.plasma-workspace # Provides the underlying menu structure Dolphin requires
       ];
     };
 }

@@ -69,6 +69,17 @@
         style = "adwaita-dark"; # Or "breeze" / "fusion" depending on preference
       };
 
+      programs.thunar = {
+        enable = true;
+        plugins = with pkgs.xfce; [
+          thunar-archive-plugin # clic derecho → extraer/comprimir
+          thunar-volman # automontaje de medios
+        ];
+      };
+
+      programs.xfconf.enable = true; # sin esto Thunar no guarda sus preferencias
+      services.tumbler.enable = true; # miniaturas
+
       environment.systemPackages = with pkgs; [
         noctalia
         polkit_gnome
@@ -80,10 +91,10 @@
         glib
         glib-networking
         gammastep
-        kdePackages.dolphin
-        kdePackages.kdegraphics-thumbnailers
-        kdePackages.kio-extras
-        kdePackages.kservice
+
+        file-roller
+        ffmpegthumbnailer
+
         libsForQt5.qt5ct
         kdePackages.qt6ct
         kdePackages.breeze
