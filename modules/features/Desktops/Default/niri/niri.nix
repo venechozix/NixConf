@@ -49,8 +49,8 @@
           binds = import ./_binds.nix { inherit pkgs lib self'; };
 
           cursor = {
-            xcursor-theme = "catppuccin-mocha-dark-cursors";
-            xcursor-size = 24;
+            xcursor-theme = self.lib.cursor.name;
+            xcursor-size = self.lib.cursor.size;
           };
 
           environment = {

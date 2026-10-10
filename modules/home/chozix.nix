@@ -16,6 +16,7 @@
 
       home.stateVersion = "25.11";
       imports = [
+        self.homeModules.cursor
         self.homeModules.noctalia-settings
       ];
 
@@ -140,15 +141,15 @@
 
       # - END OF GIT -
 
-      home.pointerCursor = {
-        enable = true;
-        name = "catppuccin-mocha-dark-cursors";
-        package = pkgs.catppuccin-cursors.mochaDark;
-        x11.enable = true;
-        gtk.enable = true;
-        sway.enable = true;
-        size = 24;
-      };
+      #     home.pointerCursor = {
+      #       enable = true;
+      #       name = "catppuccin-mocha-dark-cursors";
+      #       package = pkgs.catppuccin-cursors.mochaDark;
+      #       x11.enable = true;
+      #       gtk.enable = true;
+      #       sway.enable = true;
+      #       size = 24;
+      #     };
 
       home.packages = with pkgs; [
         super-productivity
