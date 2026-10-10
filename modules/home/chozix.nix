@@ -33,6 +33,10 @@
         };
       };
 
+      xdg.configFile."xfce4/helpers.rc".text = ''
+        TerminalEmulator=alacritty
+      '';
+
       home.file.".config/kdeglobals".text = ''
         [General]
         TerminalApplication=alacritty

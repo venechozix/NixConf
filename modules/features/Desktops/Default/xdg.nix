@@ -42,9 +42,6 @@
 
       environment.etc."xdg/menus/applications.menu".source =
         "${pkgs.kdePackages.plasma-workspace}/etc/xdg/menus/plasma-applications.menu";
-      environment.etc."xdg/xfce4/helpers.rc".text = ''
-        TerminalEmulator=alacritty
-      '';
 
       environment.systemPackages = with pkgs; [
         xdg-terminal-exec
