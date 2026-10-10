@@ -71,7 +71,7 @@
 
       programs.thunar = {
         enable = true;
-        plugins = with pkgs.xfce; [
+        plugins = with pkgs; [
           thunar-archive-plugin # clic derecho → extraer/comprimir
           thunar-volman # automontaje de medios
         ];
@@ -94,6 +94,7 @@
 
         file-roller
         ffmpegthumbnailer
+        xfce4-exo
 
         libsForQt5.qt5ct
         kdePackages.qt6ct
