@@ -65,7 +65,7 @@
         spotify
         keepassxc
 
-        brave
+        thunar
 
         teamspeak6-client
         zip
