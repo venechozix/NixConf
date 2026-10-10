@@ -1,7 +1,7 @@
 { self, ... }:
 let
   name = "scm-saber-alter-3rd-ascensio-596775dd";
-  size = 24;
+  size = 32;
 in
 {
   # Valores compartidos (los lee niri.nix)
