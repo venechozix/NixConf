@@ -103,7 +103,6 @@
         koodo-reader
         obsidian
 
-        tuios
       ];
 
     };
