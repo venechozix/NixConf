@@ -102,6 +102,8 @@
         qbittorrent
         koodo-reader
         obsidian
+
+        tuios
       ];
 
     };
