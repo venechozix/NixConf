@@ -16,11 +16,11 @@
 
       home.stateVersion = "25.11";
 
-
       imports = [
         self.homeModules.saber-alter-cursor
         self.homeModules.noctalia-settings
         self.homeModules.neovim
+        self.homeModules.zed-editor
       ];
 
       programs.alacritty = {
@@ -58,8 +58,6 @@
         };
       };
 
-
-
       # - END OF GIT -
 
       #     home.pointerCursor = {
@@ -71,7 +69,6 @@
       #       sway.enable = true;
       #       size = 24;
       #     };
-
 
       home.packages = with pkgs; [
         super-productivity
