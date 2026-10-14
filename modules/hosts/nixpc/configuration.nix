@@ -19,7 +19,6 @@
         self.nixosModules.misc
         self.nixosModules.virt
         self.nixosModules.syncthing
-        self.nixosModules.llms
 
         inputs.nix-gaming.nixosModules.pipewireLowLatency
       ];
