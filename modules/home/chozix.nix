@@ -58,17 +58,6 @@
         };
       };
 
-      # - END OF GIT -
-
-      #     home.pointerCursor = {
-      #       enable = true;
-      #       name = "catppuccin-mocha-dark-cursors";
-      #       package = pkgs.catppuccin-cursors.mochaDark;
-      #       x11.enable = true;
-      #       gtk.enable = true;
-      #       sway.enable = true;
-      #       size = 24;
-      #     };
 
       home.packages = with pkgs; [
         super-productivity

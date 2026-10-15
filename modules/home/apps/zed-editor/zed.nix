@@ -6,7 +6,11 @@
         enable = true;
 
         # Zed extensions (Nix syntax support + nil/nixd integration)
-        extensions = [ "nix" ];
+        extensions = [
+          "nix"
+          "aura-theme"          # provides "Aura Dark (Soft Text)"
+          "warm-charmed-icons"  # provides "Warm Charmed Icons"
+        ];
 
         # Wrapped onto Zed's PATH, so no system-wide install needed
         extraPackages = with pkgs; [
@@ -18,6 +22,9 @@
         ];
 
         userSettings = {
+
+          theme = "Aura Dark (Soft Text)";
+          icon_theme = "Warm Charmed Icons";
           languages = {
             Nix = {
               language_servers = [
