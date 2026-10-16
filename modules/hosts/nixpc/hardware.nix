@@ -49,23 +49,23 @@
         ];
       };
 
-     fileSystems."/mnt/hdd1" = {
-       device = "/dev/disk/by-uuid/88237231-091b-4901-8a49-fb6dac2b268f"; # replace with your UUID
-       fsType = "ext4"; # or whatever lsblk shows
-       options = [
-         "defaults"
-         "nofail"
-       ]; # nofail = don’t break boot if missing
-     };
+    fileSystems."/mnt/hdd1" = {
+      device = "/dev/disk/by-uuid/08f8c850-58e5-47d6-8302-5bd777d50508"; # replace with your UUID
+      fsType = "ext4"; # or whatever lsblk shows
+      options = [
+        "defaults"
+        "nofail"
+      ]; # nofail = don’t break boot if missing
+    };
 
-     fileSystems."/home/chozix/drives/hdd1" = {
-       device = "/dev/disk/by-uuid/88237231-091b-4901-8a49-fb6dac2b268f"; # replace with your UUID
-       fsType = "ext4"; # or whatever lsblk shows
-       options = [
-         "defaults"
-         "nofail"
-       ]; # nofail = don’t break boot if missing
-     };
+    fileSystems."/home/chozix/drives/hdd1" = {
+      device = "/dev/disk/by-uuid/08f8c850-58e5-47d6-8302-5bd777d50508"; # replace with your UUID
+      fsType = "ext4"; # or whatever lsblk shows
+      options = [
+        "defaults"
+        "nofail"
+      ]; # nofail = don’t break boot if missing
+    };
 
       fileSystems."/home/chozix/drives/hdd2" = {
         device = "/dev/disk/by-uuid/628f7e98-4d7f-4c74-a2b2-1c1bf1dafae6"; # replace with your UUID
