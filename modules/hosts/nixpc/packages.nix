@@ -101,6 +101,7 @@
         koodo-reader
         obsidian
         wine64
+        wine
 
       ];
 
