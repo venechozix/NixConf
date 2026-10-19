@@ -102,6 +102,7 @@
         qbittorrent
         koodo-reader
         obsidian
+        wine64
 
       ];
 
