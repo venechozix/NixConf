@@ -81,8 +81,6 @@
         audacity
         helium
         kdePackages.dolphin
-        wine
-        wine64
         winetricks
         gimp
         vlc
