@@ -13,7 +13,6 @@ order = [ "Main" ]
     center = [ "workspaces" ]
     concave_edge_corners = false
     end = [ "tray", "bluetooth", "wallpaper", "notifications", "control-center" ]
-    margin_ends = 0
     radius = 80
     shadow = false
     start = [ "launcher", "clock", "volume", "media", "group:g1" ]
