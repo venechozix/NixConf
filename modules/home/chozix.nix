@@ -14,7 +14,7 @@
       home.username = "chozix";
       home.homeDirectory = "/home/chozix";
 
-      home.stateVersion = "25.11";
+      home.stateVersion = "26.05";
 
       imports = [
         self.homeModules.saber-alter-cursor
