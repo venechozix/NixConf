@@ -4,7 +4,10 @@ config_version = 14
 order = [ "Main" ]
 
     [bar.Main]
-    background_opacity = 0.0
+    background_opacity = 0.44999998994171619
+    border = "surface_variant"
+    margin_ends = 22
+    scale = 1.1000000089406967
     capsule = true
     capsule_thickness = 0.87999998405575752
     center = [ "workspaces" ]
@@ -28,6 +31,19 @@ order = [ "Main" ]
         members = [ "ram", "cpu", "sysmon" ]
         opacity = 1.0
         padding = 6.0
+
+
+[control_center]
+hidden_tabs = [ "power", "network", "weather", "calendar", "screen-time" ]
+sidebar = "none"
+sidebar_section = "none"
+width = 1000
+
+    [[control_center.shortcuts]]
+    type = "wifi"
+
+    [[control_center.shortcuts]]
+    type = "bluetooth"
 
 [desktop_widgets]
 enabled = false
@@ -150,28 +166,36 @@ card_borders = false
 corner_radius_scale = 1.4000000208616257
 font_family = "Cascadia Mono NF Light"
 popup_borders = false
+avatar_path = "/home/chozix/Pictures/7aca7207cf4e879eb6ed28a846c88e80.jpg"
+
+    [shell.launcher]
+    pinned = [ "zen-twilight" ]
+
+    [shell.panel]
+    open_near_click_control_center = true
 
 [theme]
-builtin = "Gruvbox"
-community_palette = "Murata"
 mode = "dark"
-source = "community"
+source = "wallpaper"
 wallpaper_scheme = "m3-tonal-spot"
 
     [theme.templates]
-    enable_builtin_templates = false
+    community_ids = [ "zen-browser" ]
+    enable_builtin_templates = true
+
+
 
 [wallpaper.default]
-path = "/home/chozix/Pictures/wallpapers/Horizontal/HQAVF6zakAAGDxb.jpg"
+path = "/home/chozix/Pictures/wallpapers/Horizontal/HT53zWPX0AAUH2X.jpg"
 
 [wallpaper.last]
-path = "/home/chozix/Pictures/wallpapers/Horizontal/HQAVF6zakAAGDxb.jpg"
+path = "/home/chozix/Pictures/wallpapers/Horizontal/HT53zWPX0AAUH2X.jpg"
 
 [wallpaper.monitors.DP-1]
-path = "/home/chozix/Pictures/wallpapers/Horizontal/HQAVF6zakAAGDxb.jpg"
+path = "/home/chozix/Pictures/wallpapers/Horizontal/HT53zWPX0AAUH2X.jpg"
 
 [wallpaper.monitors.HDMI-A-1]
-path = "/home/chozix/Pictures/wallpapers/Horizontal/HQAVF6zakAAGDxb.jpg"
+path = "/home/chozix/Pictures/wallpapers/Horizontal/HT53zWPX0AAUH2X.jpg"
 
 [widget.audio_visualizer]
 interactive = false
