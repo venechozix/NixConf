@@ -17,15 +17,7 @@ in
       default = { };
     };
 
-    cursor = mkOption {
-      type = types.submodule {
-        options = {
-          theme = mkOption { type = types.str; default = "saber-alter-1"; };
-          size = mkOption { type = types.int; default = 32; };
-        };
-      };
-      default = { };
-    };
+
   };
 
   config = {
@@ -53,18 +45,30 @@ in
         ) cfg.cursors;
       };
 
-    flake.homeModules.cursor =
-      { pkgs, ... }:
-      {
-        home.pointerCursor = {
-          enable = true;
-          name = cfg.cursors.${cfg.cursor.theme}.name;
-          size = cfg.cursor.size;
-          package = self.packages.${pkgs.stdenv.hostPlatform.system}."cursor-${cfg.cursor.theme}";
-          x11.enable = true;
-          gtk.enable = true;
-          sway.enable = true;
+      flake.homeModules.cursor =
+        { config, pkgs, ... }:
+        {
+          options.custom.cursor = {
+            theme = lib.mkOption {
+              type = lib.types.enum (lib.attrNames cfg.cursors);
+              default = "saber-alter-1";
+            };
+            size = lib.mkOption {
+              type = lib.types.int;
+              default = 32;
+            };
+          };
+
+          config.home.pointerCursor = {
+            enable = true;
+            name = cfg.cursors.${config.custom.cursor.theme}.name;
+            size = config.custom.cursor.size;
+            package =
+              self.packages.${pkgs.stdenv.hostPlatform.system}."cursor-${config.custom.cursor.theme}";
+            x11.enable = true;
+            gtk.enable = true;
+            sway.enable = true;
+          };
         };
-      };
   };
 }

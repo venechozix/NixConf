@@ -23,6 +23,8 @@
         self.homeModules.zed-editor
       ];
 
+      custom.cursor.theme = "jeanne-cursor-1" ;
+
       programs.alacritty = {
         enable = true;
         settings = {
