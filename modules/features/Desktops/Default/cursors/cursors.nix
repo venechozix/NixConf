@@ -45,8 +45,8 @@ in
         ) cfg.cursors;
       };
 
-      flake.homeModules.cursor =
-        { config, pkgs, ... }:
+      flake.nixosModules.cursor =
+        { lib, ... }:
         {
           options.custom.cursor = {
             theme = lib.mkOption {
@@ -58,13 +58,19 @@ in
               default = 32;
             };
           };
+        };
 
-          config.home.pointerCursor = {
+      flake.homeModules.cursor =
+        { osConfig, pkgs, ... }:
+        let
+          sel = osConfig.custom.cursor;
+        in
+        {
+          home.pointerCursor = {
             enable = true;
-            name = cfg.cursors.${config.custom.cursor.theme}.name;
-            size = config.custom.cursor.size;
-            package =
-              self.packages.${pkgs.stdenv.hostPlatform.system}."cursor-${config.custom.cursor.theme}";
+            name = cfg.cursors.${sel.theme}.name;
+            size = sel.size;
+            package = self.packages.${pkgs.stdenv.hostPlatform.system}."cursor-${sel.theme}";
             x11.enable = true;
             gtk.enable = true;
             sway.enable = true;

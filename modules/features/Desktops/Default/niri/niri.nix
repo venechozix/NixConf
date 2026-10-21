@@ -2,11 +2,26 @@
 {
 
   flake.nixosModules.niri =
-    { pkgs, lib, ... }:
     {
+      config,
+      pkgs,
+      lib,
+      ...
+    }:
+    let
+      cursor = config.custom.cursor;
+    in
+    {
+
+      imports = [ self.nixosModules.cursor ];
       programs.niri = {
         enable = true;
-        package = self.packages.${pkgs.stdenv.hostPlatform.system}.defNiri;
+        package = self.packages.${pkgs.stdenv.hostPlatform.system}.defNiri.wrap {
+          settings.cursor = {
+            xcursor-theme = self.cursors.${cursor.theme}.name;
+            xcursor-size = cursor.size;
+          };
+        };
       };
     };
 
