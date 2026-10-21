@@ -4,7 +4,6 @@ let
   size = 32;
 in
 {
-  # Valores compartidos (los lee niri.nix)
   flake.lib.cursor = { inherit name size; };
 
   perSystem =
