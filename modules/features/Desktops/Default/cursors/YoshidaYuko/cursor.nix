@@ -1,6 +1,6 @@
 { self, ... }:
 let
-  name = "saber-alter-cursor";
+  name = "yoshida-yuko-cursor";
   size = 32;
 in
 {
