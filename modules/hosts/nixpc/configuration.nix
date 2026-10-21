@@ -47,7 +47,7 @@
       ];
 
       custom.cursor.theme = "jeanne-cursor-1" ;
-      custom.cursor.size = 64;
+      custom.cursor.size = 42;
 
       services.hardware.openrgb.enable = true;
 
