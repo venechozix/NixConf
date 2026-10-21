@@ -8,7 +8,6 @@ let
   cfg = config.flake;
   inherit (lib) mkOption types;
 
-  # nombre que pide el compositor -> cursor equivalente que suele existir
   fallbacks = {
     "e-resize" = "ew-resize";
     "w-resize" = "ew-resize";
