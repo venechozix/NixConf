@@ -49,8 +49,8 @@
           binds = import ./_binds.nix { inherit pkgs lib self'; };
 
           cursor = {
-            xcursor-theme = self.lib.cursor.name;
-            xcursor-size = self.lib.cursor.size;
+            xcursor-theme = self.cursors.${self.cursor.theme}.name;
+            xcursor-size = self.cursor.size;
           };
 
           environment = {

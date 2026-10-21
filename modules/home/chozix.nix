@@ -17,7 +17,7 @@
       home.stateVersion = "26.05";
 
       imports = [
-        self.homeModules.jeanne-D-Arc-Cursor
+        self.homeModules.cursor
         self.homeModules.noctalia-settings
         self.homeModules.neovim
         self.homeModules.zed-editor
