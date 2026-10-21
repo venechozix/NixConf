@@ -46,6 +46,8 @@
         "flakes"
       ];
 
+      custom.cursor.theme = "jeanne-cursor-1" ;
+
       services.hardware.openrgb.enable = true;
 
       users.defaultUserShell = pkgs.zsh;
