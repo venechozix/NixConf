@@ -48,11 +48,6 @@
 
           binds = import ./_binds.nix { inherit pkgs lib self'; };
 
-          cursor = {
-            xcursor-theme = self.cursors.${self.cursor.theme}.name;
-            xcursor-size = self.cursor.size;
-          };
-
           environment = {
             QT_QPA_PLATFORMTHEME = "qt6ct";
             TERMINAL = "alacritty";
