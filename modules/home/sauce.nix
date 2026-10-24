@@ -61,6 +61,7 @@
         inputs.zen-browser.packages."${stdenv.hostPlatform.system}".twilight
         qbittorrent
         koodo-reader
+        gparted
       ];
     };
 
