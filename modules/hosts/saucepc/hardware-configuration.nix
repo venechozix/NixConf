@@ -42,7 +42,7 @@
       };
 
       fileSystems."/mnt/hdd1" = {
-        device = "/dev/disk/by-uuid/0C9825169824FFB6"; # replace with your UUID
+        device = "/dev/disk/by-uuid/18c56744-aed2-4643-b277-348a4f09d2dd"; # replace with your UUID
         fsType = "ntfs3"; # or whatever lsblk shows
         options = [
           "defaults"

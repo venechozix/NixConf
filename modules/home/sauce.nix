@@ -62,6 +62,7 @@
         qbittorrent
         koodo-reader
         gparted
+        equibop
       ];
     };
 
