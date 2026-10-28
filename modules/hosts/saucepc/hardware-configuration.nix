@@ -43,11 +43,11 @@
 
       fileSystems."/mnt/hdd1" = {
         device = "/dev/disk/by-uuid/18c56744-aed2-4643-b277-348a4f09d2dd"; # replace with your UUID
-        fsType = "ntfs3"; # or whatever lsblk shows
+        fsType = "ext4"; # or whatever lsblk shows
         options = [
           "defaults"
           "nofail"
-        ]; # nofail = don’t break boot if missing
+        ];
       };
       swapDevices = [
         { device = "/dev/disk/by-uuid/e2f87c63-4534-47e8-aaf8-332de9b81554"; }
