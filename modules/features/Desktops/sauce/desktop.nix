@@ -22,7 +22,7 @@
       time.timeZone = "America/Santiago";
 
       # Select internationalisation properties.
-      i18n.defaultLocale = "en_US.UTF-8";
+      i18n.defaultLocale = "es_CL.UTF-8";
 
       i18n.extraLocaleSettings = {
         LC_ADDRESS = "es_CL.UTF-8";
