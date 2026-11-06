@@ -32,6 +32,8 @@
         "flakes"
       ];
 
+      programs.nix-ld.enable = true;
+
       hardware.graphics.enable = true;
       services.xserver.enable = true;
       services.xserver.videoDrivers = [ "amdgpu" ];
