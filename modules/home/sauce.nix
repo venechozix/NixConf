@@ -63,6 +63,7 @@
         koodo-reader
         gparted
         equibop
+        inputs.freesmlauncher.packages.${stdenv.hostPlatform.system}.freesmlauncher
       ];
     };
 
