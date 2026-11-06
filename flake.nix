@@ -10,6 +10,11 @@
       inputs.nixpkgs.follows = "nixpkgs";
     };
 
+    freesmlauncher = {
+      url = "github:FreesmTeam/FreesmLauncher";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
+
     limusic = {
       url = "github:davidvanderklay/limusic-nix";
       inputs.nixpkgs.follows = "nixpkgs";

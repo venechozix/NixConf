@@ -62,6 +62,7 @@
 
       home.packages = with pkgs; [
         super-productivity
+        inputs.freesmlauncher.packages.${stdenv.hostPlatform.system}.freesmlauncher
       ];
 
     };
