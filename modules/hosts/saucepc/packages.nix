@@ -30,6 +30,7 @@
         python313
         python314
         pyenv
+        jdk21
         #utils
         file
         win2xcur
