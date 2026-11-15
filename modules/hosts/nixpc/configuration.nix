@@ -84,6 +84,11 @@
       };
 
       programs.nix-ld.enable = true;
+      programs.nix-ld.libraries = with pkgs; [
+        libgpg-error
+      ];
+
+
 
       # Enable sound with pipewire.
       services.pulseaudio.enable = false;
