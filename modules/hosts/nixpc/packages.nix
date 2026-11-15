@@ -95,6 +95,7 @@
         volatility3
         bulk_extractor
         wireshark
+        imhex
 
         inputs.limusic.packages."${stdenv.hostPlatform.system}".default
 
