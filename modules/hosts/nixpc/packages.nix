@@ -93,6 +93,7 @@
         equibop
 
         volatility3
+        bulk_extractor
 
         inputs.limusic.packages."${stdenv.hostPlatform.system}".default
 
