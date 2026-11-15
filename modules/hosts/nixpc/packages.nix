@@ -92,6 +92,8 @@
 
         equibop
 
+        volatility3
+
         inputs.limusic.packages."${stdenv.hostPlatform.system}".default
 
         inputs.nix-gaming.packages."${stdenv.hostPlatform.system}".osu-lazer-bin
