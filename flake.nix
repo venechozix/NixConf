@@ -16,7 +16,7 @@
     };
 
     limusic = {
-      url = "github:davidvanderklay/limusic-nix";
+      url = "github:venechozix/limusic-nix";
       inputs.nixpkgs.follows = "nixpkgs";
     };
 
