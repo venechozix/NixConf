@@ -12,7 +12,7 @@
     spawn = lib.getExe pkgs.alacritty;
   };
   "Mod+Space" = {
-    spawn-sh = "${lib.getExe self'.packages.sauceNoctalia} ipc call launcher toggle";
+    spawn-sh = "${lib.getExe pkgs.noctalia} ipc call launcher toggle";
   };
 
   # Overview / window management

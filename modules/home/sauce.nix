@@ -14,6 +14,7 @@
 
       imports = [
         self.homeModules.neovim
+        self.homeModules.noctalia-settings
       ];
 
       home.username = "sauce";

@@ -23,7 +23,7 @@
         settings = {
 
           spawn-at-startup = [
-            (lib.getExe self'.packages.sauceNoctalia)
+            (lib.getExe pkgs.noctalia)
           ];
 
           prefer-no-csd = _: { };
